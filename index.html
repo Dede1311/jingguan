@@ -2,10 +2,124 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>淨觀講堂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高雄淨觀講堂｜靜心修行・媽祖指引・人生諮詢</title>
+<meta name="description" content="高雄淨觀講堂提供靜心修行、媽祖與關聖帝爺指引、人生諮詢服務。位於高雄市三民區。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1208;--deep:#2b1f0e;--gold:#b8935a;--gold-light:#d4aa72;--gold-pale:#f5e9d3;--smoke:#f7f3ec;--stone:#8a7560;--cream:#faf6ef;--border:rgba(184,147,90,0.25);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;background:rgba(250,246,239,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:1.4rem;color:var(--deep);cursor:pointer;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:0.84rem;color:var(--stone);cursor:pointer;text-decoration:none;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:#fff;padding:9px 20px;border-radius:2px;font-size:0.82rem;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;}
+.page{display:none;min-height:100vh;padding-top:68px;}
+.page.active{display:block;}
+.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr 1fr;}
+.hero-left{background:var(--deep);display:flex;flex-direction:column;justify-content:center;padding:80px;}
+.hero-tag{font-size:0.72rem;letter-spacing:0.2em;color:var(--gold);margin-bottom:24px;}
+.hero-title{font-family:'Noto Serif TC',serif;font-size:2.8rem;font-weight:300;color:var(--gold-pale);line-height:1.45;margin-bottom:8px;}
+.hero-title strong{font-weight:700;color:var(--gold-light);display:block;font-size:2.4rem;}
+.hero-subtitle{font-size:0.93rem;color:rgba(213,190,150,0.7);letter-spacing:0.15em;margin-bottom:32px;}
+.hero-poem{font-size:0.86rem;line-height:2.3;color:rgba(213,190,150,0.6);border-left:2px solid var(--gold);padding-left:20px;margin-bottom:44px;}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;}
+.hero-right{background:var(--deep);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88);}
+.btn-primary{background:var(--gold);color:#fff;padding:13px 28px;border-radius:2px;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;font-size:0.88rem;}
+.btn-ghost{border:1px solid rgba(184,147,90,0.5);color:var(--gold-light);padding:13px 28px;border-radius:2px;cursor:pointer;background:none;font-family:'Noto Sans TC',sans-serif;font-size:0.88rem;}
+.info-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--gold);}
+.info-item{padding:24px 20px;border-right:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;gap:12px;}
+.info-label{font-size:0.68rem;color:rgba(255,255,255,0.7);margin-bottom:3px;}
+.info-value{font-size:0.82rem;color:#fff;font-weight:500;}
+.services{padding:80px;background:var(--smoke);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1100px;margin:0 auto;}
+.service-card{background:var(--cream);padding:40px 32px;}
+.service-title{font-family:'Noto Serif TC',serif;font-size:1.15rem;color:var(--deep);margin-bottom:12px;}
+.service-desc{font-size:0.84rem;line-height:2;color:var(--stone);}
+.service-list{list-style:none;margin-top:16px;}
+.service-list li{font-size:0.81rem;color:var(--stone);padding:5px 0;border-bottom:1px dashed var(--border);}
+.section-header{text-align:center;margin-bottom:56px;}
+.section-label{font-size:0.72rem;letter-spacing:0.25em;color:var(--gold);display:block;margin-bottom:16px;}
+.section-title{font-family:'Noto Serif TC',serif;font-size:2rem;font-weight:400;color:var(--deep);}
+.wisdom{padding:80px;background:var(--deep);}
+.wisdom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;}
+.wisdom-card{border:1px solid rgba(184,147,90,0.2);padding:30px 26px;}
+.wisdom-text{font-family:'Noto Serif TC',serif;font-size:0.91rem;line-height:2;color:rgba(245,233,211,0.82);}
+.wisdom-author{margin-top:16px;font-size:0.75rem;color:var(--gold);}
+.page-banner{background:var(--deep);padding:72px 80px 56px;}
+.page-banner h1{font-family:'Noto Serif TC',serif;font-size:2.5rem;font-weight:300;color:var(--gold-pale);}
+.page-banner p{margin-top:16px;font-size:0.88rem;color:rgba(213,190,150,0.65);line-height:2;max-width:520px;}
+.content-page{padding:80px;max-width:900px;margin:0 auto;}
+.booking-page{padding:80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;max-width:1100px;margin:0 auto;}
+.booking-form{display:grid;gap:13px;}
+.booking-form input,.booking-form textarea,.booking-form select{width:100%;background:var(--smoke);border:1px solid var(--border);padding:12px 15px;font-family:'Noto Sans TC',sans-serif;font-size:0.84rem;color:var(--ink);outline:none;border-radius:0;}
+.booking-form textarea{height:108px;}
+.booking-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:14px;font-family:'Noto Sans TC',sans-serif;font-size:0.86rem;cursor:pointer;width:100%;}
+footer{background:var(--ink);padding:56px 80px 32px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;}
+.footer-brand{font-family:'Ma Shan Zheng',cursive;font-size:1.45rem;color:var(--gold);margin-bottom:12px;}
+.footer-tagline{font-size:0.79rem;line-height:2;color:rgba(245,233,211,0.36);}
+.footer-col-title{font-size:0.73rem;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul a{font-size:0.8rem;color:rgba(245,233,211,0.38);text-decoration:none;cursor:pointer;}
+.footer-bottom{border-top:1px solid rgba(184,147,90,0.15);padding-top:22px;display:flex;justify-content:space-between;font-size:0.74rem;color:rgba(245,233,211,0.38);}
+@media(max-width:900px){
+nav{padding:0 20px;}
+.nav-links{display:none;}
+.hero{grid-template-columns:1fr;}
+.hero-right{display:none;}
+.hero-left{padding:56px 22px 48px;}
+.hero-title{font-size:1.7rem;}
+.hero-title strong{font-size:1.6rem;}
+.hero-buttons{flex-direction:column;}
+.info-bar{grid-template-columns:1fr 1fr;}
+.services{padding:52px 18px;}
+.services-grid{grid-template-columns:1fr;}
+.wisdom{padding:52px 18px;}
+.wisdom-grid{grid-template-columns:1fr;}
+.page-banner{padding:44px 22px 36px;}
+.content-page{padding:36px 18px;}
+.booking-page{grid-template-columns:1fr;padding:36px 18px;}
+.booking-form .form-row{grid-template-columns:1fr;}
+footer{padding:44px 18px 26px;}
+.footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
+}
+</style>
 </head>
 <body>
-<h1>淨觀講堂網站建置中</h1>
-<p>媽祖慈悲，帝爺正氣</p>
-</body>
-</html>
+<nav>
+  <span class="nav-logo" onclick="showPage('home')">淨<span>觀</span>講堂</span>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">首頁</a></li>
+    <li><a onclick="showPage('about')">關於講堂</a></li>
+    <li><a onclick="showPage('mind')">心靈智慧</a></li>
+    <li><a onclick="showPage('teacher')">黃老師語錄</a></li>
+    <li><a onclick="showPage('booking')">活動與資訊</a></li>
+  </ul>
+  <button class="nav-cta" onclick="showPage('booking')">線上預約</button>
+</nav>
+
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">高雄淨觀講堂</p>
+      <h1 class="hero-title">靜心・修心・覺心<strong>媽祖慈悲　帝爺正氣</strong></h1>
+      <p class="hero-subtitle">天地能量，指引人生</p>
+      <div class="hero-poem">在一片安靜之中，讓心慢慢落下來。<br>一呼一吸之間，身心安住，<br>方向，自然清明。</div>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="showPage('booking')">預約諮詢</button>
+        <button class="btn-ghost" onclick="showPage('about')">了解更多</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80" alt="媽祖神像">
+    </div>
+  </section>
+  <div class="info-bar">
+    <div class="info-item"><div>📍</div><div><div class="info-label">地址</div><div class="info-value">高雄市三民區​​​​​​​​​​​​​​​​
