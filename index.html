@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -10,13 +11,19 @@
 :root{--ink:#1a1208;--deep:#2b1f0e;--gold:#b8935a;--gold-light:#d4aa72;--gold-pale:#f5e9d3;--smoke:#f7f3ec;--stone:#8a7560;--cream:#faf6ef;--border:rgba(184,147,90,0.25);}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;background:rgba(250,246,239,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;background:rgba(250,246,239,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:1.4rem;color:var(--deep);cursor:pointer;}
 .nav-logo span{color:var(--gold);}
 .nav-links{display:flex;gap:28px;list-style:none;}
-.nav-links a{font-size:0.84rem;color:var(--stone);cursor:pointer;text-decoration:none;}
+.nav-links a{font-size:0.84rem;color:var(--stone);cursor:pointer;text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
 .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;border-radius:2px;font-size:0.82rem;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{width:24px;height:2px;background:var(--deep);display:block;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(250,246,239,0.98);border-bottom:1px solid var(--border);z-index:999;padding:16px 24px;}
+.mobile-menu.open{display:block;}
+.mobile-menu a{display:block;padding:14px 0;font-size:0.95rem;color:var(--stone);cursor:pointer;border-bottom:1px solid var(--border);text-decoration:none;}
+.mobile-menu a:last-child{border-bottom:none;}
 .page{display:none;min-height:100vh;padding-top:68px;}
 .page.active{display:block;}
 .hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr 1fr;}
@@ -27,12 +34,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-subtitle{font-size:0.93rem;color:rgba(213,190,150,0.7);letter-spacing:0.15em;margin-bottom:32px;}
 .hero-poem{font-size:0.86rem;line-height:2.3;color:rgba(213,190,150,0.6);border-left:2px solid var(--gold);padding-left:20px;margin-bottom:44px;}
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;}
-.hero-right{background:var(--deep);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-right{background:var(--deep);overflow:hidden;}
 .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88);}
-.btn-primary{background:var(--gold);color:#fff;padding:13px 28px;border-radius:2px;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;font-size:0.88rem;}
+.btn-primary{background:var(--gold);color:#fff;padding:13px 28px;border-radius:2px;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;font-size:0.88rem;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold-light);}
 .btn-ghost{border:1px solid rgba(184,147,90,0.5);color:var(--gold-light);padding:13px 28px;border-radius:2px;cursor:pointer;background:none;font-family:'Noto Sans TC',sans-serif;font-size:0.88rem;}
 .info-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--gold);}
 .info-item{padding:24px 20px;border-right:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;gap:12px;}
+.info-item:last-child{border-right:none;}
 .info-label{font-size:0.68rem;color:rgba(255,255,255,0.7);margin-bottom:3px;}
 .info-value{font-size:0.82rem;color:#fff;font-weight:500;}
 .services{padding:80px;background:var(--smoke);}
@@ -54,45 +63,52 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .page-banner h1{font-family:'Noto Serif TC',serif;font-size:2.5rem;font-weight:300;color:var(--gold-pale);}
 .page-banner p{margin-top:16px;font-size:0.88rem;color:rgba(213,190,150,0.65);line-height:2;max-width:520px;}
 .content-page{padding:80px;max-width:900px;margin:0 auto;}
-.booking-page{padding:80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;max-width:1100px;margin:0 auto;}
+.booking-grid{padding:80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;max-width:1100px;margin:0 auto;}
 .booking-form{display:grid;gap:13px;}
 .booking-form input,.booking-form textarea,.booking-form select{width:100%;background:var(--smoke);border:1px solid var(--border);padding:12px 15px;font-family:'Noto Sans TC',sans-serif;font-size:0.84rem;color:var(--ink);outline:none;border-radius:0;}
+.booking-form input:focus,.booking-form textarea:focus,.booking-form select:focus{border-color:var(--gold);}
 .booking-form textarea{height:108px;}
-.booking-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
-.submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:14px;font-family:'Noto Sans TC',sans-serif;font-size:0.86rem;cursor:pointer;width:100%;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:14px;font-family:'Noto Sans TC',sans-serif;font-size:0.86rem;cursor:pointer;width:100%;transition:background 0.2s;}
+.submit-btn:hover{background:var(--gold);color:#fff;}
 footer{background:var(--ink);padding:56px 80px 32px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;}
 .footer-brand{font-family:'Ma Shan Zheng',cursive;font-size:1.45rem;color:var(--gold);margin-bottom:12px;}
 .footer-tagline{font-size:0.79rem;line-height:2;color:rgba(245,233,211,0.36);}
 .footer-col-title{font-size:0.73rem;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;}
 .footer-col ul{list-style:none;}
-.footer-col ul li{margin-bottom:8px;}
-.footer-col ul a{font-size:0.8rem;color:rgba(245,233,211,0.38);text-decoration:none;cursor:pointer;}
+.footer-col li{margin-bottom:8px;}
+.footer-col a{font-size:0.8rem;color:rgba(245,233,211,0.38);text-decoration:none;cursor:pointer;}
+.footer-col a:hover{color:var(--gold-light);}
 .footer-bottom{border-top:1px solid rgba(184,147,90,0.15);padding-top:22px;display:flex;justify-content:space-between;font-size:0.74rem;color:rgba(245,233,211,0.38);}
 @media(max-width:900px){
 nav{padding:0 20px;}
-.nav-links{display:none;}
+.nav-links,.nav-cta{display:none;}
+.hamburger{display:flex;}
 .hero{grid-template-columns:1fr;}
 .hero-right{display:none;}
-.hero-left{padding:56px 22px 48px;}
+.hero-left{padding:48px 22px;}
 .hero-title{font-size:1.7rem;}
 .hero-title strong{font-size:1.6rem;}
 .hero-buttons{flex-direction:column;}
+.btn-primary,.btn-ghost{text-align:center;padding:14px;}
 .info-bar{grid-template-columns:1fr 1fr;}
-.services{padding:52px 18px;}
-.services-grid{grid-template-columns:1fr;}
-.wisdom{padding:52px 18px;}
-.wisdom-grid{grid-template-columns:1fr;}
+.info-item{padding:16px 14px;}
+.info-value{font-size:0.72rem;}
+.services,.wisdom{padding:52px 18px;}
+.services-grid,.wisdom-grid{grid-template-columns:1fr;}
 .page-banner{padding:44px 22px 36px;}
 .content-page{padding:36px 18px;}
-.booking-page{grid-template-columns:1fr;padding:36px 18px;}
-.booking-form .form-row{grid-template-columns:1fr;}
+.booking-grid{grid-template-columns:1fr;padding:36px 18px;gap:36px;}
+.form-row{grid-template-columns:1fr;}
 footer{padding:44px 18px 26px;}
 .footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
+.footer-bottom{flex-direction:column;gap:6px;}
 }
 </style>
 </head>
 <body>
+
 <nav>
   <span class="nav-logo" onclick="showPage('home')">淨<span>觀</span>講堂</span>
   <ul class="nav-links">
@@ -103,7 +119,20 @@ footer{padding:44px 18px 26px;}
     <li><a onclick="showPage('booking')">活動與資訊</a></li>
   </ul>
   <button class="nav-cta" onclick="showPage('booking')">線上預約</button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');toggleMenu()">首頁</a>
+  <a onclick="showPage('about');toggleMenu()">關於講堂</a>
+  <a onclick="showPage('mind');toggleMenu()">心靈智慧</a>
+  <a onclick="showPage('teacher');toggleMenu()">黃老師語錄</a>
+  <a onclick="showPage('booking');toggleMenu()">活動與資訊・線上預約</a>
+</div>
+
+<!-- HOME -->
 
 <div id="page-home" class="page active">
   <section class="hero">
@@ -122,4 +151,5 @@ footer{padding:44px 18px 26px;}
     </div>
   </section>
   <div class="info-bar">
-    <div class="info-item"><div>📍</div><div><div class="info-label">地址</div><div class="info-value">高雄市三民區​​​​​​​​​​​​​​​​
+    <div class="info-item"><span>📍</span><div><div class="info-label">地址</div><div class="info-value">高雄市三民區建國三路83號6樓</div></div></div>
+    <div class="info-item"><span>📞</span><div><div class="info-label">電話</div><div class="info-value">+886-7-2859118</div></div><
