@@ -116,7 +116,7 @@ body:not(:has(:target)) #home{display:block;}
 .submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:16px;font-family:'Noto Sans TC',sans-serif;font-size:1rem;letter-spacing:0.14em;cursor:pointer;width:100%;transition:background 0.2s;}
 .submit-btn:hover{background:var(--gold);color:#fff;}
 footer{background:var(--ink);padding:72px 96px 40px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:48px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px;margin-bottom:48px;}
 .footer-brand{font-family:'Ma Shan Zheng',cursive;font-size:2.2rem;color:var(--gold);margin-bottom:14px;}
 .footer-tagline{font-size:1rem;line-height:2.1;color:rgba(245,233,211,0.34);}
 .footer-col-title{font-size:1rem;letter-spacing:0.18em;color:var(--gold);margin-bottom:18px;}
@@ -141,9 +141,13 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .hero-buttons{flex-direction:column;gap:12px;}
   .btn-primary,.btn-ghost{text-align:center;padding:16px 24px;font-size:1.05rem;}
   .info-bar{grid-template-columns:1fr 1fr;}
-  .info-item{padding:20px 16px;}
-  .info-label{font-size:0.95rem;}
-  .info-value{font-size:1rem;}
+  .info-item{padding:18px 14px;border-right:none;border-bottom:1px solid rgba(184,147,90,0.12);align-items:flex-start;}
+  .info-item:nth-child(odd){border-right:1px solid rgba(184,147,90,0.12);}
+  .info-item:last-child{border-bottom:none;}
+  .info-item:nth-last-child(2){border-bottom:none;}
+  .info-icon-wrap{width:32px;height:32px;flex-shrink:0;}
+  .info-label{font-size:0.7rem;letter-spacing:0.06em;margin-bottom:3px;}
+  .info-value{font-size:0.82rem;line-height:1.4;word-break:break-word;}
   .services{padding:60px 20px;}
   .services-grid{grid-template-columns:1fr;}
   .home-about{grid-template-columns:1fr;padding:60px 20px;gap:0;}
@@ -237,7 +241,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div class="wisdom-card"><p class="wisdom-text">問神、問人，都不如先問自己。很多答案，你其實早就知道了。</p><p class="wisdom-author">— 黃老師</p></div>
     </div>
   </section>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#home">首頁</a></li><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <div id="about" class="page">
@@ -254,7 +258,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <a class="btn-primary" href="#booking" style="margin-top:48px;display:inline-block">預約諮詢</a>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#home">首頁</a></li><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <div id="mind" class="page">
@@ -265,7 +269,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     <div style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border);"><span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">三・修心覺察</span><h2>回到內在的平靜</h2><p>修心的過程，其實是一種重新認識自己的旅程。修心不是逃避生活，而是在生活之中找到真正的平靜。</p></div>
     <div><span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">四・人生智慧</span><h2>在人生之中找到方向</h2><p>當我們願意靜下心來，傾聽內在的聲音，很多問題的答案其實就在自己的心中。</p></div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#home">首頁</a></li><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <div id="teacher" class="page">
@@ -277,7 +281,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:52px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:20px;font-weight:500;">承蒙關照　道法自然</h3><p>有時候，放手，才是最大的智慧。讓事情自然發展，讓緣分自然流動，讓答案自然浮現。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:20px;font-weight:500;">我會好好的</h3><p>不管現在多難，記得告訴自己：我會好好的。媽祖慈悲守護著你，你也要好好守護自己。</p></div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#home">首頁</a></li><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <div id="booking" class="page">
@@ -307,7 +311,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       </div>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#home">首頁</a></li><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 </body>
