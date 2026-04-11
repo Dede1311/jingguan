@@ -36,7 +36,10 @@ label.hamburger-btn{cursor:pointer;}
 .page{display:none;min-height:100vh;padding-top:80px;}
 .page:target{display:block;}
 #home{display:block;}
-.page:target ~ #home{display:none;}
+#about:target ~ #home,
+#mind:target ~ #home,
+#teacher:target ~ #home,
+#booking:target ~ #home{display:none;}
 
 /* HERO */
 .hero{min-height:calc(100vh - 80px);display:grid;grid-template-columns:1fr 1fr;}
@@ -218,8 +221,6 @@ footer{background:var(--ink);padding:72px 96px 40px;}
 </head>
 <body>
 
-<input type="checkbox" id="menu-toggle">
-
 <nav>
   <a class="nav-logo" href="#home">淨<span>觀</span>講堂</a>
   <ul class="nav-links">
@@ -234,7 +235,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </label>
 </nav>
-
+<input type="checkbox" id="menu-toggle">
 <div class="mobile-menu">
   <a href="#home" onclick="document.getElementById('menu-toggle').checked=false">首頁</a>
   <a href="#about" onclick="document.getElementById('menu-toggle').checked=false">關於講堂</a>
@@ -272,7 +273,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><div class="info-label">電子郵件</div><div class="info-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div>
+      <div><div class="info-label">電子郵件</div><div class="info-value"><a href="/cdn-cgi/l/email-protection#ddb7b4b3babaa8bcb3efedefee9dbab0bcb4b1f3beb2b0"><span class="__cf_email__" data-cfemail="117b787f767664707f2321232251767c70787d3f727e7c">[email&#160;protected]</span></a></div></div>
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -345,7 +346,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div>
       <div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div>
-      <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
+      <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#f3999a9d949486929dc1c3c1c0b3949e929a9fdd909c9e"><span class="__cf_email__" data-cfemail="a4cecdcac3c3d1c5ca96949697e4c3c9c5cdc88ac7cbc9">[email&#160;protected]</span></a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div>
   </footer>
@@ -365,7 +366,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <a class="btn-primary" href="#booking" style="margin-top:48px;display:inline-block">預約諮詢</a>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#85efecebe2e2f0e4ebb7b5b7b6c5e2e8e4ece9abe6eae8"><span class="__cf_email__" data-cfemail="90faf9fef7f7e5f1fea2a0a2a3d0f7fdf1f9fcbef3fffd">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- MIND -->
@@ -393,7 +394,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <p>當我們願意靜下心來，傾聽內在的聲音，很多問題的答案其實就在自己的心中。真正的人生智慧，不是逃避困難，而是在經歷之中成長，並找到屬於自己的道路。</p>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#b4dedddad3d3c1d5da86848687f4d3d9d5ddd89ad7dbd9"><span class="__cf_email__" data-cfemail="c4aeadaaa3a3b1a5aaf6f4f6f784a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- TEACHER -->
@@ -406,7 +407,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">承蒙關照　道法自然</h3><p>有時候，放手，才是最大的智慧。讓事情自然發展，讓緣分自然流動，讓答案自然浮現。道法自然，不是消極，而是一種更深的信任。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">我會好好的</h3><p>不管現在多難，記得告訴自己：我會好好的。媽祖慈悲守護著你，你也要好好守護自己。</p></div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#b1dbd8dfd6d6c4d0df83818382f1d6dcd0d8dd9fd2dedc"><span class="__cf_email__" data-cfemail="96fcfff8f1f1e3f7f8a4a6a4a5d6f1fbf7fffab8f5f9fb">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- BOOKING -->
@@ -419,7 +420,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <ul class="contact-list">
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="contact-label">地址</div><div class="contact-value">高雄市三民區建國三路83號6樓（御宿商旅對面）</div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">電話</div><div class="contact-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#e08a898e878795818ed2d0d2d3a0878d81898cce838f8d"><span class="__cf_email__" data-cfemail="6d0704030a0a180c035f5d5f5e2d0a000c0401430e0200">[email&#160;protected]</span></a></div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">營業時間</div><div class="contact-value">每週六・日　13:00 – 17:00</div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="contact-label">Facebook</div><div class="contact-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/jing_guan_mazu" target="_blank">@jing_guan_mazu</a></div></div></li>
@@ -437,8 +438,5 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       </div>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
-</div>
-
-</body>
-</html>
+  <f
+    
