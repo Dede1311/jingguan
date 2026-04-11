@@ -10,11 +10,11 @@
 :root{--ink:#1a1208;--deep:#2b1f0e;--gold:#b8935a;--gold-light:#d4aa72;--gold-pale:#f5e9d3;--smoke:#f7f3ec;--stone:#8a7560;--cream:#faf6ef;--border:rgba(184,147,90,0.25);}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:72px;background:rgba(250,246,239,0.97);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:1.65rem;color:var(--deep);text-decoration:none;letter-spacing:0.1em;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:80px;background:rgba(250,246,239,0.97);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:2.2rem;color:var(--deep);text-decoration:none;letter-spacing:0.12em;}
 .nav-logo span{color:var(--gold);}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:0.95rem;color:var(--stone);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;}
+.nav-links a{font-size:1rem;color:var(--stone);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
 .nav-cta{background:var(--gold);color:#fff;padding:11px 26px;border-radius:2px;font-size:0.9rem;text-decoration:none;letter-spacing:0.1em;}
 .nav-cta:hover{background:var(--deep);}
@@ -24,7 +24,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 /* MOBILE MENU - checkbox trick */
 #menu-toggle{display:none;}
 .mobile-menu{
-  display:none;position:fixed;top:72px;left:0;right:0;
+  display:none;position:fixed;top:80px;left:0;right:0;
   background:var(--smoke);border-bottom:1px solid var(--border);
   z-index:999;
 }
@@ -39,22 +39,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 label.hamburger-btn{cursor:pointer;}
 
 /* PAGES */
-.page{display:none;min-height:100vh;padding-top:72px;}
+.page{display:none;min-height:100vh;padding-top:80px;}
 .page:target{display:block;}
 #home{display:block;}
 .page:target ~ #home{display:none;}
 #menu-target:target ~ #home{display:block;}
 
 /* HERO */
-.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1fr 1fr;}
+.hero{min-height:calc(100vh - 80px);display:grid;grid-template-columns:1fr 1fr;}
 .hero-left{background:var(--deep);display:flex;flex-direction:column;justify-content:center;padding:96px 72px 80px 96px;position:relative;overflow:hidden;}
 .hero-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(184,147,90,0.13) 0%,transparent 65%);pointer-events:none;}
-.hero-tag{font-size:0.78rem;letter-spacing:0.25em;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
+.hero-tag{font-size:0.9rem;letter-spacing:0.25em;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
 .hero-tag::before{content:'';width:36px;height:1px;background:var(--gold);}
-.hero-title{font-family:'Noto Serif TC',serif;font-size:3.4rem;font-weight:300;color:var(--gold-pale);line-height:1.4;letter-spacing:0.04em;margin-bottom:10px;}
-.hero-title strong{font-weight:700;color:var(--gold-light);display:block;font-size:3rem;margin-top:4px;}
-.hero-subtitle{font-family:'Noto Serif TC',serif;font-size:1.05rem;color:rgba(213,190,150,0.7);letter-spacing:0.18em;margin-bottom:36px;}
-.hero-poem{font-size:0.96rem;line-height:2.4;color:rgba(213,190,150,0.58);border-left:2px solid var(--gold);padding-left:22px;margin-bottom:52px;letter-spacing:0.06em;}
+.hero-title{font-family:'Noto Serif TC',serif;font-size:4.2rem;font-weight:300;color:var(--gold-pale);line-height:1.4;letter-spacing:0.04em;margin-bottom:10px;}
+.hero-title strong{font-weight:700;color:var(--gold-light);display:block;font-size:3.6rem;margin-top:4px;}
+.hero-subtitle{font-family:'Noto Serif TC',serif;font-size:1.2rem;color:rgba(213,190,150,0.7);letter-spacing:0.18em;margin-bottom:36px;}
+.hero-poem{font-size:1.1rem;line-height:2.4;color:rgba(213,190,150,0.58);border-left:2px solid var(--gold);padding-left:22px;margin-bottom:52px;letter-spacing:0.06em;}
 .hero-buttons{display:flex;gap:18px;flex-wrap:wrap;}
 .hero-right{background:var(--deep);overflow:hidden;position:relative;}
 .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88) saturate(1.05);}
@@ -236,7 +236,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><div class="info-label">電子郵件</div><div class="info-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div>
+      <div><div class="info-label">電子郵件</div><div class="info-value"><a href="/cdn-cgi/l/email-protection#412b282f262634202f7371737201262c20282d6f222e2c"><span class="__cf_email__" data-cfemail="9df7f4f3fafae8fcf3afadafaeddfaf0fcf4f1b3fef2f0">[email&#160;protected]</span></a></div></div>
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -309,7 +309,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div>
       <div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div>
-      <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
+      <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#4e24272029293b2f207c7e7c7d0e29232f2722602d2123"><span class="__cf_email__" data-cfemail="bcd6d5d2dbdbc9ddd28e8c8e8ffcdbd1ddd5d092dfd3d1">[email&#160;protected]</span></a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div>
   </footer>
@@ -330,7 +330,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <a class="btn-primary" href="#booking" style="margin-top:48px;display:inline-block">預約諮詢</a>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#92f8fbfcf5f5e7f3fca0a2a0a1d2f5fff3fbfebcf1fdff"><span class="__cf_email__" data-cfemail="80eae9eee7e7f5e1eeb2b0b2b3c0e7ede1e9ecaee3efed">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <!-- MIND -->
@@ -363,7 +363,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <p style="font-size:0.96rem;line-height:2.4;color:var(--stone);">人生的道路並不總是清晰。有時候，我們會遇到困惑與迷惘。當我們願意靜下心來，傾聽內在的聲音，很多問題的答案其實就在自己的心中。真正的人生智慧，不是逃避困難，而是在經歷之中成長，並找到屬於自己的道路。</p>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#c1aba8afa6a6b4a0aff3f1f3f281a6aca0a8adefa2aeac"><span class="__cf_email__" data-cfemail="aec4c7c0c9c9dbcfc09c9e9c9deec9c3cfc7c280cdc1c3">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <!-- TEACHER -->
@@ -376,7 +376,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:20px;font-weight:500;">承蒙關照　道法自然</h3><p style="font-size:0.96rem;line-height:2.5;color:var(--stone);">人生有很多事，不是努力就能控制的。有時候，放手，才是最大的智慧。讓事情自然發展，讓緣分自然流動，讓答案自然浮現。道法自然，不是消極，而是一種更深的信任——信任自己，信任天地，信任這一切的安排都有它的道理。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:20px;font-weight:500;">我會好好的</h3><p style="font-size:0.96rem;line-height:2.5;color:var(--stone);">不管現在多難，不管此刻多痛，記得告訴自己：我會好好的。這不是自我欺騙，這是一種選擇。選擇相信自己有能力走過去，選擇相信時間會帶來改變。媽祖慈悲守護著你，你也要好好守護自己。</p></div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#booking">活動資訊</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="/cdn-cgi/l/email-protection#701a191e171705111e4240424330171d11191c5e131f1d"><span class="__cf_email__" data-cfemail="0a6063646d6d7f6b64383a38394a6d676b636624696567">[email&#160;protected]</span></a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
 </div>
 
 <!-- BOOKING -->
@@ -397,7 +397,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
         </li>
         <li>
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div>
+          <div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#f3999a9d949486929dc1c3c1c0b3949e929a9fdd909c9e"><span class="__cf_email__" data-cfemail="dab0b3b4bdbdafbbb4e8eae8e99abdb7bbb3b6f4b9b5b7">[email&#160;protected]</span></a></div></div>
         </li>
         <li>
           <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -425,8 +425,4 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       </div>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li></ul></div><div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a>高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div></footer>
-</div>
-
-</body>
-</html>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣</p></div><div class="f
