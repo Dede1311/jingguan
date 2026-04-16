@@ -144,10 +144,6 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .info-icon-wrap{width:36px;height:36px;margin-top:0;}
   .info-label{font-size:0.82rem;letter-spacing:0.08em;}
   .info-value{font-size:0.88rem;line-height:1.5;word-break:break-word;text-align:center;}
-  .home-about{grid-template-columns:1fr;padding:60px 20px;gap:32px;}
-  .about-image-wrap{display:block;}
-  .about-image-wrap img{width:100%;height:auto;object-fit:contain;aspect-ratio:auto;}
-  .about-image-wrap::before{display:none;}
   .section-label{font-size:1.1rem;letter-spacing:0.2em;}
   .section-title{font-size:2.4rem;}
   .services{padding:60px 20px;}
@@ -155,10 +151,11 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .service-title{font-size:1.5rem;}
   .service-desc{font-size:1rem;}
   .home-about{grid-template-columns:1fr;padding:0 0 60px;gap:0;}
-  .about-image-wrap{width:100%;margin:0;}
-  .about-image-wrap img{width:100%;height:85vw;object-fit:cover;object-position:center top;}
+  .about-image-wrap{display:block;width:100%;margin:0;}
+  .about-image-wrap img{width:100%;height:auto;max-height:none;display:block;}
   .about-image-wrap::before{display:none;}
   .home-about>div:last-child{padding:40px 20px 0;}
+  .about-quote{font-size:3rem;}
   .about-text{font-size:1rem;}
   .wisdom{padding:60px 20px;}
   .wisdom-grid{grid-template-columns:1fr;}
