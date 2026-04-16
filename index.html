@@ -146,7 +146,8 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .info-value{font-size:0.88rem;line-height:1.5;word-break:break-word;text-align:center;}
   .home-about{grid-template-columns:1fr;padding:60px 20px;gap:32px;}
   .about-image-wrap{display:block;}
-  .about-image-wrap img{width:100%;aspect-ratio:auto;max-height:420px;object-fit:cover;object-position:center center;}
+  .about-image-wrap img{width:100%;height:auto;object-fit:contain;aspect-ratio:auto;}
+  .about-image-wrap::before{display:none;}
   .section-label{font-size:1.1rem;letter-spacing:0.2em;}
   .section-title{font-size:2.4rem;}
   .services{padding:60px 20px;}
