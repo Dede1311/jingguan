@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>高雄淨觀講堂｜靜心修行・媽祖指引・人生諮詢</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%232b1f0e'/><text x='32' y='22' font-family='serif' font-size='22' fill='%23b8935a' text-anchor='middle' dominant-baseline='middle'>淨</text><text x='32' y='46' font-family='serif' font-size='22' fill='%23b8935a' text-anchor='middle' dominant-baseline='middle'>觀</text></svg>">
 <meta name="description" content="高雄淨觀講堂提供靜心修行、媽祖與關聖帝爺指引、人生諮詢服務。位於高雄市三民區建國三路83號6樓。每週六日13:00-17:00開放。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 <style>
@@ -12,25 +14,25 @@
 body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:80px;background:rgba(250,246,239,0.97);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:2.2rem;color:var(--deep);text-decoration:none;letter-spacing:0.12em;}
-.nav-logo span{color:var(--gold);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:80px;background:rgba(250,246,239,0.97);border-bottom:1px solid var(–border);}
+.nav-logo{font-family:‘Ma Shan Zheng’,cursive;font-size:2.2rem;color:var(–deep);text-decoration:none;letter-spacing:0.12em;}
+.nav-logo span{color:var(–gold);}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:1rem;color:var(--stone);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s;}
-.nav-links a:hover{color:var(--gold);}
-.nav-cta{background:var(--gold);color:#fff;padding:11px 26px;border-radius:2px;font-size:0.9rem;text-decoration:none;letter-spacing:0.1em;transition:background 0.2s;}
-.nav-cta:hover{background:var(--deep);}
+.nav-links a{font-size:1rem;color:var(–stone);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s;}
+.nav-links a:hover{color:var(–gold);}
+.nav-cta{background:var(–gold);color:#fff;padding:11px 26px;border-radius:2px;font-size:0.9rem;text-decoration:none;letter-spacing:0.1em;transition:background 0.2s;}
+.nav-cta:hover{background:var(–deep);}
 .hamburger-btn{display:none;background:none;border:none;cursor:pointer;padding:4px;}
-.hamburger-btn svg{width:26px;height:26px;stroke:var(--deep);fill:none;stroke-width:2;stroke-linecap:round;}
+.hamburger-btn svg{width:26px;height:26px;stroke:var(–deep);fill:none;stroke-width:2;stroke-linecap:round;}
 label.hamburger-btn{cursor:pointer;}
 
 /* MOBILE MENU */
 #menu-toggle{display:none;}
-.mobile-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(--smoke);border-bottom:1px solid var(--border);z-index:999;}
+.mobile-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(–smoke);border-bottom:1px solid var(–border);z-index:999;}
 #menu-toggle:checked ~ .mobile-menu{display:block;}
-.mobile-menu a{display:block;padding:16px 24px;font-size:1.1rem;color:var(--stone);text-decoration:none;border-bottom:1px solid var(--border);}
+.mobile-menu a{display:block;padding:16px 24px;font-size:1.1rem;color:var(–stone);text-decoration:none;border-bottom:1px solid var(–border);}
 .mobile-menu a:last-child{border-bottom:none;}
-.mobile-menu a:hover{color:var(--gold);}
+.mobile-menu a:hover{color:var(–gold);}
 
 /* PAGES */
 .page{display:none;min-height:100vh;padding-top:80px;}
@@ -43,401 +45,78 @@ label.hamburger-btn{cursor:pointer;}
 
 /* HERO */
 .hero{min-height:calc(100vh - 80px);display:grid;grid-template-columns:1fr 1fr;}
-.hero-left{background:var(--deep);display:flex;flex-direction:column;justify-content:center;padding:96px 72px 80px 96px;position:relative;overflow:hidden;}
-.hero-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(184,147,90,0.13) 0%,transparent 65%);pointer-events:none;}
-.hero-tag{font-size:1.1rem;letter-spacing:0.25em;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
-.hero-tag::before{content:'';width:36px;height:1px;background:var(--gold);}
-.hero-title{font-family:'Noto Serif TC',serif;font-size:clamp(2.5rem,3.8vw,4.2rem);font-weight:300;color:var(--gold-pale);line-height:1.4;letter-spacing:0.04em;margin-bottom:10px;}
-.hero-title strong{font-weight:700;color:var(--gold-light);display:block;font-size:clamp(2.2rem,3.4vw,3.8rem);margin-top:4px;}
-.hero-subtitle{font-family:'Noto Serif TC',serif;font-size:1.3rem;color:rgba(213,190,150,0.7);letter-spacing:0.18em;margin-bottom:36px;}
-.hero-poem{font-size:1.15rem;line-height:2.4;color:rgba(213,190,150,0.58);border-left:2px solid var(--gold);padding-left:22px;margin-bottom:52px;letter-spacing:0.06em;}
+.hero-left{background:var(–deep);display:flex;flex-direction:column;justify-content:center;padding:96px 72px 80px 96px;position:relative;overflow:hidden;}
+.hero-left::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(184,147,90,0.13) 0%,transparent 65%);pointer-events:none;}
+.hero-tag{font-size:1.1rem;letter-spacing:0.25em;color:var(–gold);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
+.hero-tag::before{content:’’;width:36px;height:1px;background:var(–gold);}
+.hero-title{font-family:‘Noto Serif TC’,serif;font-size:clamp(2.5rem,3.8vw,4.2rem);font-weight:300;color:var(–gold-pale);line-height:1.4;letter-spacing:0.04em;margin-bottom:10px;}
+.hero-title strong{font-weight:700;color:var(–gold-light);display:block;font-size:clamp(2.2rem,3.4vw,3.8rem);margin-top:4px;}
+.hero-subtitle{font-family:‘Noto Serif TC’,serif;font-size:1.3rem;color:rgba(213,190,150,0.7);letter-spacing:0.18em;margin-bottom:36px;}
+.hero-poem{font-size:1.15rem;line-height:2.4;color:rgba(213,190,150,0.58);border-left:2px solid var(–gold);padding-left:22px;margin-bottom:52px;letter-spacing:0.06em;}
 .hero-buttons{display:flex;gap:18px;flex-wrap:wrap;}
-.hero-right{background:var(--deep);overflow:hidden;position:relative;}
+.hero-right{background:var(–deep);overflow:hidden;position:relative;}
 .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.88) saturate(1.05);}
-.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--deep) 0%,transparent 20%),linear-gradient(to top,rgba(13,8,0,0.4) 0%,transparent 35%);}
+.hero-right::after{content:’’;position:absolute;inset:0;background:linear-gradient(to right,var(–deep) 0%,transparent 20%),linear-gradient(to top,rgba(13,8,0,0.4) 0%,transparent 35%);}
 
 /* BUTTONS */
-.btn-primary{background:var(--gold);color:#fff;padding:15px 36px;border-radius:2px;text-decoration:none;font-size:0.95rem;display:inline-block;letter-spacing:0.1em;transition:all 0.3s;}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
-.btn-ghost{border:1px solid rgba(184,147,90,0.5);color:var(--gold-light);padding:15px 36px;border-radius:2px;text-decoration:none;font-size:0.95rem;display:inline-block;letter-spacing:0.1em;transition:all 0.3s;}
-.btn-ghost:hover{border-color:var(--gold);background:rgba(184,147,90,0.08);}
+.btn-primary{background:var(–gold);color:#fff;padding:15px 36px;border-radius:2px;text-decoration:none;font-size:0.95rem;display:inline-block;letter-spacing:0.1em;transition:all 0.3s;}
+.btn-primary:hover{background:var(–gold-light);transform:translateY(-2px);}
+.btn-ghost{border:1px solid rgba(184,147,90,0.5);color:var(–gold-light);padding:15px 36px;border-radius:2px;text-decoration:none;font-size:0.95rem;display:inline-block;letter-spacing:0.1em;transition:all 0.3s;}
+.btn-ghost:hover{border-color:var(–gold);background:rgba(184,147,90,0.08);}
 
 /* INFO BAR */
-.info-bar{display:grid;grid-template-columns:repeat(5,1fr);background:var(--deep);border-top:1px solid rgba(184,147,90,0.2);}
+.info-bar{display:grid;grid-template-columns:repeat(5,1fr);background:var(–deep);border-top:1px solid rgba(184,147,90,0.2);}
 .info-item{padding:26px 18px;border-right:1px solid rgba(184,147,90,0.12);display:flex;align-items:flex-start;gap:14px;}
 .info-item:last-child{border-right:none;}
 .info-icon-wrap{width:40px;height:40px;border:1px solid rgba(184,147,90,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.info-icon-wrap svg{width:17px;height:17px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.info-icon-wrap svg{width:17px;height:17px;stroke:var(–gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 .info-label{font-size:0.95rem;letter-spacing:0.14em;color:rgba(184,147,90,0.65);margin-bottom:5px;text-transform:uppercase;}
-.info-value{font-size:1.05rem;color:var(--gold-pale);line-height:1.6;}
-.info-value a{color:var(--gold-pale);text-decoration:none;}
+.info-value{font-size:1.05rem;color:var(–gold-pale);line-height:1.6;}
+.info-value a{color:var(–gold-pale);text-decoration:none;}
 
 /* SECTIONS */
 .section-header{text-align:center;margin-bottom:72px;}
-.section-label{font-size:1rem;letter-spacing:0.28em;color:var(--gold);display:block;margin-bottom:18px;text-transform:uppercase;}
-.section-title{font-family:'Noto Serif TC',serif;font-size:3rem;font-weight:400;color:var(--deep);letter-spacing:0.06em;line-height:1.4;}
-.section-divider{width:52px;height:1px;background:var(--gold);margin:22px auto 0;}
+.section-label{font-size:1rem;letter-spacing:0.28em;color:var(–gold);display:block;margin-bottom:18px;text-transform:uppercase;}
+.section-title{font-family:‘Noto Serif TC’,serif;font-size:3rem;font-weight:400;color:var(–deep);letter-spacing:0.06em;line-height:1.4;}
+.section-divider{width:52px;height:1px;background:var(–gold);margin:22px auto 0;}
 
 /* SERVICES */
-.services{padding:108px 96px;background:var(--smoke);}
+.services{padding:108px 96px;background:var(–smoke);}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;max-width:1200px;margin:0 auto;}
-.service-card{background:var(--cream);padding:52px 40px;position:relative;overflow:hidden;transition:transform 0.4s;}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.5s;}
+.service-card{background:var(–cream);padding:52px 40px;position:relative;overflow:hidden;transition:transform 0.4s;}
+.service-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(–gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.5s;}
 .service-card:hover{transform:translateY(-5px);}
 .service-card:hover::before{transform:scaleX(1);}
-.service-icon-box{width:54px;height:54px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:26px;background:var(--gold-pale);}
-.service-icon-box svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-.service-title{font-family:'Noto Serif TC',serif;font-size:1.55rem;font-weight:500;color:var(--deep);margin-bottom:16px;letter-spacing:0.04em;}
-.service-desc{font-size:1.05rem;line-height:2.1;color:var(--stone);}
+.service-icon-box{width:54px;height:54px;border:1px solid var(–border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:26px;background:var(–gold-pale);}
+.service-icon-box svg{width:22px;height:22px;stroke:var(–gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.service-title{font-family:‘Noto Serif TC’,serif;font-size:1.55rem;font-weight:500;color:var(–deep);margin-bottom:16px;letter-spacing:0.04em;}
+.service-desc{font-size:1.05rem;line-height:2.1;color:var(–stone);}
 .service-list{list-style:none;margin-top:22px;}
-.service-list li{font-size:1rem;color:var(--stone);padding:7px 0;border-bottom:1px dashed var(--border);display:flex;align-items:center;gap:10px;}
-.service-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.service-list li{font-size:1rem;color:var(–stone);padding:7px 0;border-bottom:1px dashed var(–border);display:flex;align-items:center;gap:10px;}
+.service-list li::before{content:’’;width:4px;height:4px;border-radius:50%;background:var(–gold);flex-shrink:0;}
 
 /* HOME ABOUT */
 .home-about{display:grid;grid-template-columns:1fr 1fr;max-width:1280px;margin:0 auto;padding:108px 96px;gap:96px;align-items:center;}
 .about-image-wrap{position:relative;}
 .about-image-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;}
-.about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--border);z-index:-1;}
-.about-quote{font-family:'Ma Shan Zheng',cursive;font-size:3.8rem;color:var(--gold);line-height:1.5;margin-bottom:28px;}
-.about-text{font-size:1.05rem;line-height:2.3;color:var(--stone);margin-bottom:20px;}
+.about-image-wrap::before{content:’’;position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(–border);z-index:-1;}
+.about-quote{font-family:‘Ma Shan Zheng’,cursive;font-size:3.8rem;color:var(–gold);line-height:1.5;margin-bottom:28px;}
+.about-text{font-size:1.05rem;line-height:2.3;color:var(–stone);margin-bottom:20px;}
 
 /* WISDOM */
-.wisdom{padding:108px 96px;background:var(--deep);position:relative;overflow:hidden;}
-.wisdom::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(184,147,90,0.08) 0%,transparent 60%);}
-.wisdom .section-title{color:var(--gold-pale);}
+.wisdom{padding:108px 96px;background:var(–deep);position:relative;overflow:hidden;}
+.wisdom::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(184,147,90,0.08) 0%,transparent 60%);}
+.wisdom .section-title{color:var(–gold-pale);}
 .wisdom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1200px;margin:0 auto;}
 .wisdom-card{border:1px solid rgba(184,147,90,0.18);padding:40px 34px;position:relative;transition:border-color 0.3s;}
-.wisdom-card:hover{border-color:var(--gold);}
-.wisdom-card::before{content:'"';font-family:'Noto Serif TC',serif;font-size:5rem;color:var(--gold);opacity:0.1;position:absolute;top:8px;left:18px;line-height:1;}
-.wisdom-text{font-family:'Noto Serif TC',serif;font-size:1.15rem;line-height:2.1;color:rgba(245,233,211,0.85);letter-spacing:0.04em;position:relative;z-index:1;}
-.wisdom-author{margin-top:20px;font-size:1rem;letter-spacing:0.12em;color:var(--gold);}
+.wisdom-card:hover{border-color:var(–gold);}
+.wisdom-card::before{content:’”’;font-family:‘Noto Serif TC’,serif;font-size:5rem;color:var(–gold);opacity:0.1;position:absolute;top:8px;left:18px;line-height:1;}
+.wisdom-text{font-family:‘Noto Serif TC’,serif;font-size:1.15rem;line-height:2.1;color:rgba(245,233,211,0.85);letter-spacing:0.04em;position:relative;z-index:1;}
+.wisdom-author{margin-top:20px;font-size:1rem;letter-spacing:0.12em;color:var(–gold);}
 
 /* PAGE BANNER */
-.page-banner{background:var(--deep);padding:96px 96px 72px;position:relative;overflow:hidden;}
-.page-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(184,147,90,0.1) 0%,transparent 60%);}
-.page-banner-tag{font-size:0.9rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px;position:relative;}
-.page-banner-tag::before{content:'';width:30px;height:1px;background:var(--gold);}
-.page-banner h1{font-family:'Noto Serif TC',serif;font-size:3.6rem;font-weight:300;color:var(--gold-pale);letter-spacing:0.06em;line-height:1.4;position:relative;}
-.page-banner p{margin-top:18px;font-size:1.1rem;color:rgba(213,190,150,0.62);line-height:2.1;max-width:560px;position:relative;}
-
-/* CONTENT PAGE */
-.content-page{padding:96px;max-width:960px;margin:0 auto;}
-.content-page h2{font-family:'Noto Serif TC',serif;font-size:2.4rem;color:var(--deep);margin-bottom:28px;font-weight:400;letter-spacing:0.04em;}
-.content-page p{font-size:1.05rem;line-height:2.4;color:var(--stone);margin-bottom:20px;}
-
-/* BOOKING */
-.booking-grid{padding:96px;display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1200px;margin:0 auto;align-items:start;}
-.booking-grid h2{font-family:'Noto Serif TC',serif;font-size:2rem;color:var(--deep);margin-bottom:24px;font-weight:400;}
-.booking-grid>div>p{font-size:1rem;line-height:2.2;color:var(--stone);margin-bottom:28px;}
-.contact-list{list-style:none;display:flex;flex-direction:column;gap:18px;}
-.contact-list li{display:flex;align-items:flex-start;gap:16px;}
-.contact-icon{width:38px;height:38px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.contact-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-.contact-label{font-size:0.8rem;letter-spacing:0.12em;color:var(--stone);margin-bottom:3px;}
-.contact-value{font-size:1rem;color:var(--ink);}
-.contact-value a{color:var(--gold);text-decoration:none;}
-.booking-form{display:grid;gap:14px;}
-.booking-form input,.booking-form textarea,.booking-form select{width:100%;background:var(--smoke);border:1px solid var(--border);padding:14px 18px;font-family:'Noto Sans TC',sans-serif;font-size:1rem;color:var(--ink);outline:none;border-radius:0;transition:border-color 0.2s;}
-.booking-form input:focus,.booking-form textarea:focus,.booking-form select:focus{border-color:var(--gold);}
-.booking-form textarea{height:120px;resize:vertical;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:16px;font-family:'Noto Sans TC',sans-serif;font-size:1rem;letter-spacing:0.14em;cursor:pointer;width:100%;transition:background 0.2s;}
-.submit-btn:hover{background:var(--gold);color:#fff;}
-
-/* FOOTER */
-footer{background:var(--ink);padding:72px 96px 40px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:48px;}
-.footer-brand{font-family:'Ma Shan Zheng',cursive;font-size:2.2rem;color:var(--gold);margin-bottom:14px;}
-.footer-tagline{font-size:1rem;line-height:2.1;color:rgba(245,233,211,0.34);}
-.footer-col-title{font-size:1rem;letter-spacing:0.18em;color:var(--gold);margin-bottom:18px;}
-.footer-col ul{list-style:none;}
-.footer-col li{margin-bottom:10px;}
-.footer-col a{font-size:1rem;color:rgba(245,233,211,0.36);text-decoration:none;transition:color 0.2s;}
-.footer-col a:hover{color:var(--gold-light);}
-.footer-bottom{border-top:1px solid rgba(184,147,90,0.14);padding-top:26px;display:flex;justify-content:space-between;font-size:0.95rem;color:rgba(245,233,211,0.35);}
-
-/* MOBILE */
-@media(max-width:1024px){
-  nav{padding:0 24px;}
-  .nav-links,.nav-cta{display:none;}
-  .hamburger-btn{display:block;}
-  .page{padding-top:80px;}
-  .hero{grid-template-columns:1fr;}
-  .hero-right{display:block;height:280px;}
-  .hero-left{padding:56px 28px 52px;}
-  .hero-tag{font-size:0.95rem;}
-  .hero-title{font-size:2.4rem;}
-  .hero-title strong{font-size:2.2rem;}
-  .hero-subtitle{font-size:1.1rem;}
-  .hero-poem{font-size:1rem;}
-  .hero-buttons{flex-direction:column;gap:12px;}
-  .btn-primary,.btn-ghost{text-align:center;padding:16px 24px;font-size:1.05rem;}
-  .info-bar{grid-template-columns:1fr 1fr;}
-  .info-item{padding:20px 12px;border-right:none;border-bottom:1px solid rgba(184,147,90,0.12);flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;}
-  .info-item:nth-child(odd){border-right:1px solid rgba(184,147,90,0.12);}
-  .info-item:last-child{border-bottom:none;}
-  .info-item:nth-last-child(2):not(:nth-child(odd)){border-bottom:none;}
-  .info-icon-wrap{width:36px;height:36px;margin-top:0;}
-  .info-label{font-size:0.82rem;letter-spacing:0.08em;}
-  .info-value{font-size:0.88rem;line-height:1.5;word-break:break-word;text-align:center;}
-  .section-label{font-size:1.1rem;letter-spacing:0.2em;}
-  .section-title{font-size:2.4rem;}
-  .services{padding:60px 20px;}
-  .services-grid{grid-template-columns:1fr;}
-  .service-title{font-size:1.5rem;}
-  .service-desc{font-size:1rem;}
-  .service-list li{font-size:0.98rem;}
-  .home-about{grid-template-columns:1fr;padding:60px 20px;gap:32px;}
-  .about-image-wrap{display:block;}
-  .about-image-wrap img{aspect-ratio:3/2;}
-  .about-quote{font-size:3rem;}
-  .about-text{font-size:1rem;}
-  .wisdom{padding:60px 20px;}
-  .wisdom-grid{grid-template-columns:1fr;}
-  .wisdom-text{font-size:1.1rem;}
-  .wisdom-author{font-size:0.95rem;}
-  .page-banner{padding:52px 24px 44px;}
-  .page-banner-tag{font-size:1rem;}
-  .page-banner h1{font-size:2.4rem;}
-  .page-banner p{font-size:1.05rem;}
-  .content-page{padding:44px 20px;}
-  .content-page h2{font-size:2rem;}
-  .content-page p{font-size:1rem;}
-  .booking-grid{grid-template-columns:1fr;padding:44px 20px;gap:40px;}
-  .booking-grid h2{font-size:1.8rem;}
-  .contact-label{font-size:0.85rem;}
-  .contact-value{font-size:1rem;}
-  .form-row{grid-template-columns:1fr;}
-  .booking-form input,.booking-form textarea,.booking-form select{font-size:1rem;}
-  .submit-btn{font-size:1rem;}
-  footer{padding:52px 20px 32px;}
-  .footer-brand{font-size:2rem;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
-  .footer-col-title{font-size:0.95rem;}
-  .footer-col a{font-size:0.92rem;}
-  .footer-tagline{font-size:0.95rem;}
-  .footer-bottom{flex-direction:column;gap:8px;font-size:0.88rem;}
-}
-</style>
-</head>
-<body>
-
-<nav>
-  <a class="nav-logo" href="#home">淨<span>觀</span>講堂</a>
-  <ul class="nav-links">
-    <li><a href="#home">首頁</a></li>
-    <li><a href="#about">關於講堂</a></li>
-    <li><a href="#mind">心靈智慧</a></li>
-    <li><a href="#teacher">黃老師語錄</a></li>
-    <li><a href="#booking">活動與資訊</a></li>
-  </ul>
-  <a class="nav-cta" href="#booking">線上預約</a>
-  <label class="hamburger-btn" for="menu-toggle">
-    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </label>
-</nav>
-<input type="checkbox" id="menu-toggle">
-<div class="mobile-menu">
-  <a href="#home" onclick="document.getElementById('menu-toggle').checked=false">首頁</a>
-  <a href="#about" onclick="document.getElementById('menu-toggle').checked=false">關於講堂</a>
-  <a href="#mind" onclick="document.getElementById('menu-toggle').checked=false">心靈智慧</a>
-  <a href="#teacher" onclick="document.getElementById('menu-toggle').checked=false">黃老師語錄</a>
-  <a href="#booking" onclick="document.getElementById('menu-toggle').checked=false">活動與資訊・線上預約</a>
-</div>
-
-<!-- HOME -->
-<div id="home" class="page">
-  <section class="hero">
-    <div class="hero-left">
-      <p class="hero-tag">高雄淨觀講堂</p>
-      <h1 class="hero-title">靜心・修心・覺心<strong>媽祖慈悲　帝爺正氣</strong></h1>
-      <p class="hero-subtitle">天地能量，指引人生</p>
-      <div class="hero-poem">在一片安靜之中，讓心慢慢落下來。<br>一呼一吸之間，身心安住，<br>方向，自然清明。</div>
-      <div class="hero-buttons">
-        <a class="btn-primary" href="#booking">預約諮詢</a>
-        <a class="btn-ghost" href="#about">了解更多</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="mazu.jpg" alt="媽祖神像　慈悲守護">
-    </div>
-  </section>
-
-  <div class="info-bar">
-    <div class="info-item">
-      <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-      <div><div class="info-label">地址</div><div class="info-value">高雄市三民區<br>建國三路83號6樓</div></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-      <div><div class="info-label">電話</div><div class="info-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><div class="info-label">電子郵件</div><div class="info-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div><div class="info-label">營業時間</div><div class="info-value">每週六・日<br>13:00 – 17:00</div></div>
-    </div>
-    <div class="info-item">
-      <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
-      <div><div class="info-label">Facebook</div><div class="info-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div>
-    </div>
-  </div>
-
-  <section class="services">
-    <div class="section-header">
-      <span class="section-label">我們的服務</span>
-      <h2 class="section-title">為每一顆迷惘的心<br>點一盞明燈</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3 class="service-title">靜心修行</h3>
-        <p class="service-desc">透過靜坐與修心練習，學會觀照自己、放下執著，重新與內在連結，找回生命的安定感。</p>
-        <ul class="service-list"><li>靜坐引導課程</li><li>呼吸與專注練習</li><li>內觀修心工作坊</li></ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <h3 class="service-title">信仰祈福</h3>
-        <p class="service-desc">媽祖慈悲守護，關聖帝爺正氣安住，透過信仰的力量，為生活帶來平安與祝福。</p>
-        <ul class="service-list"><li>點燈祈福・平安祈願</li><li>法會祝禱・心靈淨化</li><li>神明指引問事</li></ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h3 class="service-title">人生諮詢</h3>
-        <p class="service-desc">透過信仰與智慧的指引，幫助您在迷惘中看見方向，釐清人生課題、事業發展與心靈困惑。</p>
-        <ul class="service-list"><li>感情與家庭問題</li><li>事業方向與抉擇</li><li>身心靈整體諮詢</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="home-about">
-      <div class="about-image-wrap">
-        <img src="mazu.jpg" alt="媽祖慈悲神像">
-      </div>
-      <div>
-        <span class="section-label">關於我們</span>
-        <div class="about-quote">淨靜之境<br>觀悟己心</div>
-        <p class="about-text">淨觀講堂座落於高雄市三民區，是一處融合信仰、靜心與心靈諮詢的修行空間。我們以媽祖慈悲之心、關聖帝爺的浩然正氣為依歸，協助每一位前來的人，在人生的迷茫中找到方向。</p>
-        <p class="about-text">不論您正面臨情感困境、事業抉擇，還是內心的迷惘與不安，我們都以開放、不評判的態度陪伴您——讓天地能量，成為您前行的力量。</p>
-        <a class="btn-primary" href="#about" style="margin-top:16px">深入了解</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="wisdom">
-    <div class="section-header">
-      <span class="section-label">黃老師語錄</span>
-      <h2 class="section-title" style="color:var(--gold-pale)">師語智慧</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="wisdom-grid">
-      <div class="wisdom-card"><p class="wisdom-text">媽祖的慈悲，不是替你解決所有問題，而是讓你有勇氣，面對自己的問題。</p><p class="wisdom-author">— 黃老師</p></div>
-      <div class="wisdom-card"><p class="wisdom-text">修行不是逃離生活，而是讓你在生活中，活得更清醒、更安定、更像自己。</p><p class="wisdom-author">— 黃老師</p></div>
-      <div class="wisdom-card"><p class="wisdom-text">問神、問人，都不如先問自己。很多答案，你其實早就知道了。</p><p class="wisdom-author">— 黃老師</p></div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-grid">
-      <div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心<br>媽祖慈悲，帝爺正氣<br>天地能量，指引人生</p></div>
-      <div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#home">信仰祈福</a></li><li><a href="#home">人生諮詢</a></li><li><a href="#booking">線上預約</a></li></ul></div>
-      <div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div>
-      <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a style="white-space:nowrap">高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div>
-  </footer>
-</div>
-
-<!-- ABOUT -->
-<div id="about" class="page">
-  <div class="page-banner"><p class="page-banner-tag">高雄淨觀講堂</p><h1>關於講堂</h1><p>淨觀講堂是一處融合禪修、信仰與心靈的道場。有媽祖慈悲的守護，也有關帝爺正氣的加持。</p></div>
-  <div class="content-page">
-    <h2>與自己重新相遇的旅程</h2>
-    <p>淨觀講堂座落於高雄市三民區，是一處融合信仰、靜心與心靈諮詢的修行空間。我們以媽祖慈悲之心、關聖帝爺的浩然正氣為依歸，協助每一位前來的人，在人生的迷茫中找到方向。</p>
-    <p>不論您正面臨情感困境、事業抉擇，還是內心的迷惘與不安，我們都以開放、不評判的態度陪伴您——讓天地能量，成為您前行的力量。</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px;">
-      <div style="background:var(--smoke);padding:40px 32px;"><div style="font-family:'Ma Shan Zheng',cursive;font-size:2.8rem;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">一</div><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:14px;">媽祖信仰守護</h3><p style="font-size:1rem;line-height:2;color:var(--stone);">以媽祖慈悲能量安定人心、化解不安，幫助人們在生活中找到平靜與力量。</p></div>
-      <div style="background:var(--smoke);padding:40px 32px;"><div style="font-family:'Ma Shan Zheng',cursive;font-size:2.8rem;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">二</div><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:14px;">帝君正氣加持</h3><p style="font-size:1rem;line-height:2;color:var(--stone);">透過帝君精神的學習，幫助人培養堅定的內在力量，在人生道路上走得穩定清明。</p></div>
-      <div style="background:var(--smoke);padding:40px 32px;"><div style="font-family:'Ma Shan Zheng',cursive;font-size:2.8rem;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">三</div><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:14px;">修心內在覺察</h3><p style="font-size:1rem;line-height:2;color:var(--stone);">透過靜坐、觀照與覺察，慢慢學會看見自己的情緒與想法，找到真正的平靜。</p></div>
-    </div>
-    <a class="btn-primary" href="#booking" style="margin-top:48px;display:inline-block">預約諮詢</a>
-  </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
-</div>
-
-<!-- MIND -->
-<div id="mind" class="page">
-  <div class="page-banner"><p class="page-banner-tag">心靈智慧</p><h1>信仰・修行・智慧</h1><p>從媽祖信仰到帝君精神，每一篇都是一盞指引的燈。</p></div>
-  <div class="content-page">
-    <div style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border);">
-      <span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">一・媽祖信仰</span>
-      <h2>媽祖的慈悲守護</h2>
-      <p>媽祖是華人信仰中最具慈悲與守護力量的神明之一。在淨觀講堂中，我們相信媽祖的慈悲能量能夠安定人心、化解不安，幫助人們在生活中找到平靜與力量。</p>
-    </div>
-    <div style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border);">
-      <span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">二・帝君精神</span>
-      <h2>關聖帝君的正氣與智慧</h2>
-      <p>關聖帝君是忠義與正氣的象徵。帝君精神提醒我們，在人生道路上應該保持正念、守護道義，以正直的心面對每一個選擇。</p>
-    </div>
-    <div style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border);">
-      <span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">三・修心覺察</span>
-      <h2>回到內在的平靜</h2>
-      <p>修心的過程，其實是一種重新認識自己的旅程。透過靜坐、觀照與覺察，我們慢慢學會看見自己的情緒與想法。修心不是逃避生活，而是在生活之中找到真正的平靜。</p>
-    </div>
-    <div>
-      <span style="font-size:0.9rem;color:var(--gold);display:block;margin-bottom:16px;letter-spacing:0.15em;">四・人生智慧</span>
-      <h2>在人生之中找到方向</h2>
-      <p>當我們願意靜下心來，傾聽內在的聲音，很多問題的答案其實就在自己的心中。真正的人生智慧，不是逃避困難，而是在經歷之中成長，並找到屬於自己的道路。</p>
-    </div>
-  </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
-</div>
-
-<!-- TEACHER -->
-<div id="teacher" class="page">
-  <div class="page-banner"><p class="page-banner-tag">黃老師語錄</p><h1>師語智慧</h1><p>每一句話，都是在某個當下，從心裡流出來的。</p></div>
-  <div class="content-page">
-    <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">不再問什麼時候，此刻就是答案</h3><p>與其問「什麼時候」，不如讓心歇一歇。靜靜地聽著，靜靜地看著，靜靜地做著該做的事。因為「時候」，不在遠方，就在一個呼吸之間。當心靜了，萬物皆靜；當心明了，萬事皆明。</p></div>
-    <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">媽祖在人間　志工的身影即是慈悲的化身</h3><p>當你看見一個人，默默地付出，不求回報，那就是媽祖在人間的樣子。志工的身影，就是慈悲最具體的化身。我們每一個人，都可以是媽祖在人間的一雙手。</p></div>
-    <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">錢非萬能．媽祖濟世不收錢</h3><p>因為慈悲，本來就沒有價格。真正的幫助，是讓人站起來，而不是讓人依賴。緣金隨喜，是一種心意；不是門票，也不是條件。</p></div>
-    <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">承蒙關照　道法自然</h3><p>有時候，放手，才是最大的智慧。讓事情自然發展，讓緣分自然流動，讓答案自然浮現。道法自然，不是消極，而是一種更深的信任。</p></div>
-    <div style="border-left:3px solid var(--gold);padding-left:36px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">我會好好的</h3><p>不管現在多難，記得告訴自己：我會好好的。媽祖慈悲守護著你，你也要好好守護自己。</p></div>
-  </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
-</div>
-
-<!-- BOOKING -->
-<div id="booking" class="page">
-  <div class="page-banner"><p class="page-banner-tag">活動與資訊・線上預約</p><h1>讓我們陪您<br>找到方向</h1><p>無論您面對的是情感、事業、家庭或心靈困境，歡迎填寫以下表單，我們將盡快與您聯繫。</p></div>
-  <div class="booking-grid">
-    <div>
-      <h2>歡迎前來淨觀講堂</h2>
-      <p>媽祖慈悲濟世不收費，緣金隨喜，心意即可。我們只希望每個人都能找到屬於自己的方向。</p>
-      <ul class="contact-list">
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="contact-label">地址</div><div class="contact-value">高雄市三民區建國三路83號6樓（御宿商旅對面）</div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">電話</div><div class="contact-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">營業時間</div><div class="contact-value">每週六・日　13:00 – 17:00</div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="contact-label">Facebook</div><div class="contact-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/jing_guan_mazu" target="_blank">@jing_guan_mazu</a></div></div></li>
-      </ul>
-    </div>
-    <div>
-      <h3 style="font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--deep);margin-bottom:28px;font-weight:400;letter-spacing:0.06em;">活動報名・諮詢預約</h3>
-      <div class="booking-form">
-        <div class="form-row"><input type="text" placeholder="您的姓名 *"><input type="tel" placeholder="聯絡電話 *"></div>
-        <input type="email" placeholder="電子郵件">
-        <input type="date">
-        <select><option value="" disabled selected>選擇服務項目</option><option>靜心修行課程</option><option>信仰祈福</option><option>媽祖指引諮詢</option><option>關聖帝爺指引諮詢</option><option>點燈祈福</option><option>法會報名</option><option>其他</option></select>
-        <textarea placeholder="請簡述您的需求（選填）"></textarea>
-        <button class="submit-btn">送出預約申請</button>
-      </div>
-    </div>
-  </div>
-  <f
-    
+.page-banner{background:var(–deep);padding:96px 96px 72px;position:relative;overflow:hidden;}
+.page-banner::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(184,147,90,0.1) 0%,transparent 60%);}
+.page-banner-tag{font-size:0.9rem;letter-spacing:0.22em;color:var(–gold);margin-bottom:18px;display:flex;align-items:center;gap:12px;position:relative;}
+.page-banner-tag::before{content:’’;width:30px;height:1px;background:var(–gold);}
+.page-banner h1{font
