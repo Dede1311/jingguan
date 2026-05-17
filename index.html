@@ -104,16 +104,16 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-eyebrow span { margin: 0 12px; opacity: 0.5; }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(42px, 7vw, 76px);
-  font-weight: 600; letter-spacing: 0.12em;
-  line-height: 1.2; margin-bottom: 28px;
+  font-size: clamp(40px, 6.5vw, 68px);
+  font-weight: 600; letter-spacing: 0.2em;
+  line-height: 1.3; margin-bottom: 32px;
 }
-.hero h1 .dot { color: var(--gold); margin: 0 6px; }
+.hero h1 .dot { color: var(--gold); margin: 0 4px; font-weight: 300; }
 .hero-deity {
   font-family: var(--serif);
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 500; letter-spacing: 0.35em;
-  color: var(--gold-soft); margin-bottom: 40px;
+  font-size: clamp(17px, 2.2vw, 22px);
+  font-weight: 500; letter-spacing: 0.4em;
+  color: var(--gold-soft); margin-bottom: 44px;
 }
 .hero-tagline {
   font-size: clamp(15px, 1.8vw, 17px);
@@ -145,22 +145,27 @@ img { max-width: 100%; height: auto; display: block; }
 .container { max-width: 1100px; margin: 0 auto; }
 .section-eyebrow {
   font-family: var(--latin); font-style: italic;
-  font-size: 14px; letter-spacing: 0.3em;
-  color: var(--gold-deep); margin-bottom: 16px;
-  display: flex; align-items: center; gap: 14px;
+  font-size: 13px; letter-spacing: 0.35em;
+  color: var(--gold-deep); margin-bottom: 20px;
+  text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 16px;
 }
-.section-eyebrow::before {
-  content: ''; width: 32px; height: 1px; background: var(--gold);
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: ''; width: 28px; height: 1px; background: var(--gold);
+  opacity: 0.5;
 }
+.section-eyebrow::after { display: none; }
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(32px, 4.5vw, 48px);
-  font-weight: 600; letter-spacing: 0.05em;
-  line-height: 1.3; margin-bottom: 24px;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600; letter-spacing: 0.08em;
+  line-height: 1.4; margin-bottom: 28px;
 }
 .section-lead {
-  font-size: 17px; color: var(--ink-soft);
-  max-width: 640px; line-height: 2; margin-bottom: 64px;
+  font-size: 16px; color: var(--ink-soft);
+  max-width: 600px; line-height: 2; margin-bottom: 72px;
+  letter-spacing: 0.02em;
 }
 
 /* ===== About 講堂 ===== */
@@ -171,31 +176,69 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 80px; align-items: start;
 }
 .about-text p {
-  font-size: 16px; color: var(--ink-soft);
-  margin-bottom: 20px; line-height: 2.1;
+  font-size: 15.5px; color: var(--ink-soft);
+  margin-bottom: 22px; line-height: 2.2;
+  letter-spacing: 0.02em;
 }
 .about-quote {
   border-left: 2px solid var(--gold);
-  padding-left: 24px; margin-top: 32px;
+  padding-left: 28px; margin-top: 36px;
   font-family: var(--serif); font-size: 18px;
   font-style: italic; color: var(--ink);
+  letter-spacing: 0.1em;
 }
-.about-image {
-  background: linear-gradient(135deg, #d4b87a 0%, #8a6a32 100%);
+/* About scroll - 對聯式設計 */
+.about-scroll {
+  background: var(--paper);
   aspect-ratio: 4/5;
-  position: relative; border-radius: 2px;
-  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 40px;
   overflow: hidden;
 }
-.about-image::before {
-  content: '淨'; font-family: var(--serif);
-  font-size: 280px; color: rgba(253, 250, 242, 0.15);
-  font-weight: 900;
+.about-scroll::before,
+.about-scroll::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: var(--line);
 }
-.about-image-label {
-  position: absolute; bottom: 32px; left: 32px;
-  color: var(--paper); font-family: var(--serif);
-  font-size: 16px; letter-spacing: 0.3em;
+.about-scroll::before { top: 24px; }
+.about-scroll::after { bottom: 24px; }
+.vertical-text {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  color: var(--ink);
+  line-height: 1.8;
+}
+.vertical-text.accent {
+  color: var(--gold-deep);
+}
+.scroll-seal {
+  position: absolute;
+  bottom: 48px;
+  right: 48px;
+  width: 48px;
+  height: 48px;
+  background: var(--gold-deep);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 /* 法人身份區塊 — 修改 2 */
@@ -213,13 +256,14 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.3em; font-family: var(--serif);
 }
 .legal-status h3 {
-  font-family: var(--serif); font-size: 26px;
-  font-weight: 600; margin-bottom: 24px;
-  letter-spacing: 0.05em;
+  font-family: var(--serif); font-size: 24px;
+  font-weight: 600; margin-bottom: 28px;
+  letter-spacing: 0.12em;
 }
 .legal-status p {
-  font-size: 15.5px; color: var(--ink-soft);
-  margin-bottom: 16px; line-height: 2;
+  font-size: 15px; color: var(--ink-soft);
+  margin-bottom: 18px; line-height: 2.1;
+  letter-spacing: 0.02em;
 }
 .legal-status strong { color: var(--gold-deep); font-weight: 500; }
 
@@ -246,20 +290,20 @@ img { max-width: 100%; height: auto; display: block; }
   opacity: 0.4;
 }
 .service-card h3 {
-  font-family: var(--serif); font-size: 24px;
-  font-weight: 600; margin-bottom: 16px;
-  letter-spacing: 0.05em;
+  font-family: var(--serif); font-size: 22px;
+  font-weight: 600; margin-bottom: 18px;
+  letter-spacing: 0.15em;
 }
 .service-card .desc {
   color: var(--ink-soft); font-size: 14.5px;
-  line-height: 1.9; margin-bottom: 24px;
-  min-height: 84px;
+  line-height: 2; margin-bottom: 28px;
+  min-height: 90px; letter-spacing: 0.02em;
 }
 .service-list { list-style: none; }
 .service-list li {
   font-size: 13.5px; color: var(--ink-mute);
-  padding: 6px 0; padding-left: 16px;
-  position: relative;
+  padding: 7px 0; padding-left: 18px;
+  position: relative; letter-spacing: 0.05em;
 }
 .service-list li::before {
   content: '・'; position: absolute; left: 0;
@@ -282,13 +326,13 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 20px; line-height: 1;
 }
 .pillar h3 {
-  font-family: var(--serif); font-size: 22px;
-  font-weight: 600; margin-bottom: 16px;
-  letter-spacing: 0.08em;
+  font-family: var(--serif); font-size: 21px;
+  font-weight: 600; margin-bottom: 18px;
+  letter-spacing: 0.15em;
 }
 .pillar p {
   color: var(--ink-soft); font-size: 14.5px;
-  line-height: 1.9;
+  line-height: 2; letter-spacing: 0.02em;
 }
 
 /* ===== Association ===== */
@@ -324,17 +368,18 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.1em;
 }
 .info-row {
-  display: flex; padding: 12px 0;
+  display: flex; padding: 14px 0;
   border-bottom: 1px solid rgba(184, 146, 77, 0.15);
   font-size: 14.5px;
 }
 .info-row:last-child { border-bottom: none; }
 .info-key {
   color: rgba(212, 184, 122, 0.7);
-  width: 110px; flex-shrink: 0;
-  letter-spacing: 0.1em;
+  width: 120px; flex-shrink: 0;
+  letter-spacing: 0.2em;
+  font-family: var(--serif);
 }
-.info-val { color: var(--paper); }
+.info-val { color: var(--paper); letter-spacing: 0.02em; }
 .activities { margin-top: 16px; }
 .activities h4 {
   font-family: var(--serif); font-size: 22px;
@@ -349,11 +394,11 @@ img { max-width: 100%; height: auto; display: block; }
 .activity .label {
   font-family: var(--serif); font-size: 18px;
   font-weight: 600; color: var(--paper);
-  margin-bottom: 6px; letter-spacing: 0.05em;
+  margin-bottom: 8px; letter-spacing: 0.15em;
 }
 .activity .desc {
   color: rgba(253, 250, 242, 0.65); font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.9; letter-spacing: 0.02em;
 }
 
 /* ===== Wisdom ===== */
@@ -374,13 +419,13 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--gold-deep); margin-bottom: 12px;
 }
 .wisdom-card h3 {
-  font-family: var(--serif); font-size: 22px;
-  font-weight: 600; margin-bottom: 18px;
-  letter-spacing: 0.04em; line-height: 1.4;
+  font-family: var(--serif); font-size: 21px;
+  font-weight: 600; margin-bottom: 20px;
+  letter-spacing: 0.12em; line-height: 1.5;
 }
 .wisdom-card p {
   color: var(--ink-soft); font-size: 14.5px;
-  line-height: 2;
+  line-height: 2.1; letter-spacing: 0.02em;
 }
 
 /* ===== Quotes (黃老師語錄) ===== */
@@ -432,12 +477,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .quote-item h4 {
   font-family: var(--serif); font-size: 18px;
-  font-weight: 600; margin-bottom: 14px;
-  letter-spacing: 0.05em; color: var(--ink);
+  font-weight: 600; margin-bottom: 16px;
+  letter-spacing: 0.12em; color: var(--ink);
+  line-height: 1.5;
 }
 .quote-item p {
   color: var(--ink-soft); font-size: 15px;
-  line-height: 2;
+  line-height: 2.1; letter-spacing: 0.02em;
 }
 .quote-item .sig {
   margin-top: 16px; text-align: right;
@@ -463,16 +509,16 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .contact-info p { color: rgba(253, 250, 242, 0.75); font-size: 14.5px; margin-bottom: 24px; line-height: 1.9; }
 .contact-row {
-  padding: 16px 0; border-bottom: 1px solid rgba(184, 146, 77, 0.15);
-  display: flex; gap: 16px; align-items: baseline;
+  padding: 18px 0; border-bottom: 1px solid rgba(184, 146, 77, 0.15);
+  display: flex; gap: 20px; align-items: baseline;
 }
 .contact-row:last-child { border-bottom: none; }
 .contact-label {
-  font-family: var(--serif); font-size: 14px;
-  color: var(--gold-soft); width: 80px; flex-shrink: 0;
-  letter-spacing: 0.2em;
+  font-family: var(--serif); font-size: 13px;
+  color: var(--gold-soft); width: 88px; flex-shrink: 0;
+  letter-spacing: 0.25em;
 }
-.contact-val { color: var(--paper); font-size: 14.5px; }
+.contact-val { color: var(--paper); font-size: 14.5px; letter-spacing: 0.02em; line-height: 1.7; }
 
 .booking-form {
   background: rgba(253, 250, 242, 0.04);
@@ -570,7 +616,9 @@ img { max-width: 100%; height: auto; display: block; }
   .legal-status::before { left: 24px; }
   .quote-item { padding: 28px 24px; }
   .booking-form { padding: 28px; }
-  .about-image { max-width: 360px; margin: 0 auto; }
+  .about-scroll { max-width: 360px; margin: 0 auto; gap: 48px; padding: 48px 32px; }
+  .vertical-text { font-size: 26px; letter-spacing: 0.4em; }
+  .scroll-seal { bottom: 36px; right: 36px; width: 40px; height: 40px; font-size: 18px; }
 }
 @media (max-width: 540px) {
   .hero { padding: 120px 20px 60px; }
@@ -641,8 +689,10 @@ img { max-width: 100%; height: auto; display: block; }
           「為心除霧,為人生指光。」
         </div>
       </div>
-      <div class="about-image">
-        <div class="about-image-label">為心除霧</div>
+      <div class="about-scroll">
+        <div class="vertical-text">為心除霧</div>
+        <div class="vertical-text accent">為人生指光</div>
+        <div class="scroll-seal">觀</div>
       </div>
     </div>
 
