@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -250,6 +249,17 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .association-info{grid-template-columns:1fr;gap:36px;}
   .footer-association{font-size:0.82rem;padding:22px 0;}
 }
+
+/* === 協會介紹 Banner Logo 印章(透明 PNG) === */
+.banner-with-logo{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding-right:96px;}
+.banner-logo-stamp{width:280px;height:280px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px;flex-shrink:0;box-shadow:0 0 0 1px rgba(184,147,90,0.35),0 0 0 10px rgba(184,147,90,0.12);}
+.banner-logo-stamp img{width:100%;height:auto;display:block;}
+@media(max-width:900px){
+  .banner-with-logo{grid-template-columns:1fr;padding-right:0;text-align:center;gap:32px;}
+  .banner-with-logo>div:first-child{order:2;}
+  .banner-with-logo .page-banner-tag{justify-content:center;}
+  .banner-logo-stamp{width:200px;height:200px;padding:18px;margin:0 auto;order:1;}
+}
 </style>
 </head>
 <body>
@@ -416,7 +426,18 @@ footer{background:var(--ink);padding:72px 96px 40px;}
 
 <!-- ASSOCIATION -->
 <div id="association" class="page">
-  <div class="page-banner"><p class="page-banner-tag">協會介紹</p><h1>社團法人<br>淨觀全人文教協會</h1><p>「淨觀講堂」於 2024 年 9 月正式立案為社團法人，讓淨觀講堂多年來的心靈陪伴精神，能以法人身份更穩固地服務社會。</p></div>
+  <div class="page-banner">
+    <div class="banner-with-logo">
+      <div>
+        <p class="page-banner-tag">協會介紹</p>
+        <h1>社團法人<br>淨觀全人文教協會</h1>
+        <p>「淨觀講堂」於 2024 年 9 月正式立案為社團法人，讓淨觀講堂多年來的心靈陪伴精神，能以法人身份更穩固地服務社會。</p>
+      </div>
+      <div class="banner-logo-stamp">
+        <img src="logo.png" alt="淨觀講堂 Logo">
+      </div>
+    </div>
+  </div>
   <div class="content-page">
     <h2>關於本會</h2>
     <p>協會由黃郁玲老師發起並擔任首屆理事長，以推廣全人教育、文化推廣與公益關懷為宗旨。對外，我們依然是大家熟悉的「淨觀講堂」；在正式文件上，我們是「社團法人淨觀全人文教協會」。</p>
@@ -523,4 +544,34 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       </div>
     </div>
   </div>
-  <f
+  <div class="booking-grid">
+    <div>
+      <h2>歡迎前來淨觀講堂</h2>
+      <p>媽祖慈悲濟世不收費，緣金隨喜，心意即可。我們只希望每個人都能找到屬於自己的方向。</p>
+      <ul class="contact-list">
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="contact-label">地址</div><div class="contact-value">高雄市三民區建國三路83號6樓（御宿商旅對面）</div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">電話</div><div class="contact-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">營業時間</div><div class="contact-value">每週六・日　13:00 – 17:00</div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="contact-label">Facebook</div><div class="contact-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/jing_guan_mazu" target="_blank">@jing_guan_mazu</a></div></div></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--deep);margin-bottom:28px;font-weight:400;letter-spacing:0.06em;">活動報名・諮詢預約</h3>
+      <div class="booking-form">
+        <div class="form-row"><input type="text" placeholder="您的姓名 *"><input type="tel" placeholder="聯絡電話 *"></div>
+        <input type="email" placeholder="電子郵件">
+        <input type="date">
+        <select><option value="" disabled selected>選擇服務項目</option><option>靜心修行課程</option><option>信仰祈福</option><option>媽祖指引諮詢</option><option>關聖帝爺指引諮詢</option><option>點燈祈福</option><option>法會報名</option><option>其他</option></select>
+        <textarea placeholder="請簡述您的需求（選填）"></textarea>
+        <button class="submit-btn">送出預約申請</button>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓　｜　(07) 285-9118</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
