@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>高雄淨觀講堂｜靜心修行・媽祖指引・人生諮詢</title>
 <meta name="description" content="高雄淨觀講堂提供靜心修行、媽祖與關聖帝爺指引、人生諮詢服務。位於高雄市三民區建國三路83號6樓。每週六日13:00-17:00開放。">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#1a1208;--deep:#2b1f0e;--gold:#b8935a;--gold-light:#d4aa72;--gold-pale:#f5e9d3;--smoke:#f7f3ec;--stone:#8a7560;--cream:#faf6ef;--border:rgba(184,147,90,0.25);}
@@ -13,8 +15,8 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--i
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:80px;background:rgba(250,246,239,0.97);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Ma Shan Zheng',cursive;font-size:2.2rem;color:var(--deep);text-decoration:none;letter-spacing:0.12em;}
-.nav-logo span{color:var(--gold);}
+.nav-logo{display:flex;align-items:center;height:60px;text-decoration:none;}
+.nav-logo img{height:56px;width:auto;display:block;}
 .nav-links{display:flex;gap:36px;list-style:none;}
 .nav-links a{font-size:1rem;color:var(--stone);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s;}
 .nav-links a:hover{color:var(--gold);}
@@ -249,12 +251,29 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .association-info{grid-template-columns:1fr;gap:36px;}
   .footer-association{font-size:0.82rem;padding:22px 0;}
 }
+
+/* === Logo 展示區 === */
+.brand-mark{padding:96px 32px;background:var(--cream);text-align:center;position:relative;overflow:hidden;}
+.brand-mark::before,.brand-mark::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:80px;height:1px;background:var(--gold);opacity:0.5;}
+.brand-mark::before{top:48px;}
+.brand-mark::after{bottom:48px;}
+.brand-mark-logo{width:auto;height:260px;margin:0 auto 28px;display:block;}
+.brand-mark-tagline{font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--gold);letter-spacing:0.25em;line-height:2;font-weight:500;}
+.brand-mark-sub{font-size:0.95rem;color:var(--stone);letter-spacing:0.18em;margin-top:14px;}
+@media(max-width:768px){
+  .brand-mark{padding:64px 24px;}
+  .brand-mark::before{top:32px;}
+  .brand-mark::after{bottom:32px;}
+  .brand-mark-logo{height:180px;}
+  .brand-mark-tagline{font-size:1.05rem;letter-spacing:0.18em;}
+  .brand-mark-sub{font-size:0.85rem;letter-spacing:0.12em;}
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="#home">淨<span>觀</span>講堂</a>
+  <a class="nav-logo" href="#home"><img src="logo.jpg" alt="淨觀講堂"></a>
   <ul class="nav-links">
     <li><a href="#home">首頁</a></li>
     <li><a href="#about">關於講堂</a></li>
@@ -319,6 +338,12 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div><div class="info-label">Facebook</div><div class="info-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div>
     </div>
   </div>
+
+  <section class="brand-mark">
+    <img src="logo.jpg" alt="淨觀講堂" class="brand-mark-logo">
+    <p class="brand-mark-tagline">為心除霧　為人生指光</p>
+    <p class="brand-mark-sub">社團法人淨觀全人文教協會</p>
+  </section>
 
   <section class="services">
     <div class="section-header">
