@@ -39,6 +39,7 @@ label.hamburger-btn{cursor:pointer;}
 #about:target ~ #home,
 #mind:target ~ #home,
 #teacher:target ~ #home,
+#association:target ~ #home,
 #booking:target ~ #home{display:none;}
 
 /* HERO */
@@ -218,6 +219,36 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   .footer-tagline{font-size:0.95rem;}
   .footer-bottom{flex-direction:column;gap:8px;font-size:0.88rem;}
 }
+
+/* === 協會資訊新增樣式 (沿用原色票) === */
+.hero-association{margin-top:32px;padding-top:24px;border-top:1px solid rgba(184,147,90,0.2);font-size:0.85rem;letter-spacing:0.16em;color:rgba(213,190,150,0.6);max-width:420px;line-height:1.9;}
+.footer-association{border-top:1px solid rgba(184,147,90,0.14);padding:28px 0;margin-top:8px;text-align:center;font-size:0.9rem;line-height:2;color:rgba(245,233,211,0.5);letter-spacing:0.05em;}
+.footer-association strong{color:var(--gold-light);font-weight:500;letter-spacing:0.1em;}
+.legal-block{margin-top:64px;padding:40px 36px;background:var(--smoke);border-left:3px solid var(--gold);}
+.legal-block .legal-tag{font-size:0.9rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:18px;}
+.legal-block h3{font-family:'Noto Serif TC',serif;font-size:1.5rem;font-weight:500;color:var(--deep);margin-bottom:22px;letter-spacing:0.06em;}
+.legal-block p{font-size:1.02rem;line-height:2.2;color:var(--stone);margin-bottom:14px;}
+.legal-block p:last-child{margin-bottom:0;}
+.legal-block strong{color:var(--gold);font-weight:500;}
+.teacher-identity{max-width:480px;margin:0 auto 56px;padding:24px 32px;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.teacher-identity .ti-name{font-family:'Noto Serif TC',serif;font-size:1.35rem;font-weight:500;color:var(--deep);letter-spacing:0.12em;margin-bottom:6px;}
+.teacher-identity .ti-role{font-size:0.92rem;color:var(--stone);letter-spacing:0.15em;}
+.association-info{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;}
+.association-info .ai-block h3{font-family:'Noto Serif TC',serif;font-size:1.35rem;color:var(--deep);margin-bottom:24px;font-weight:500;letter-spacing:0.06em;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.association-info .ai-row{display:flex;padding:12px 0;font-size:1rem;border-bottom:1px dashed var(--border);}
+.association-info .ai-row:last-child{border-bottom:none;}
+.association-info .ai-key{width:110px;color:var(--gold);flex-shrink:0;letter-spacing:0.1em;}
+.association-info .ai-val{color:var(--stone);}
+.association-info .ai-activity{padding:14px 0 14px 18px;border-left:2px solid var(--gold);margin-bottom:14px;}
+.association-info .ai-activity .ai-label{font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--deep);margin-bottom:4px;letter-spacing:0.06em;}
+.association-info .ai-activity .ai-desc{font-size:0.95rem;color:var(--stone);line-height:1.8;}
+@media(max-width:768px){
+  .hero-association{font-size:0.78rem;letter-spacing:0.12em;margin-top:24px;}
+  .legal-block{padding:28px 20px;}
+  .legal-block h3{font-size:1.25rem;}
+  .association-info{grid-template-columns:1fr;gap:36px;}
+  .footer-association{font-size:0.82rem;padding:22px 0;}
+}
 </style>
 </head>
 <body>
@@ -227,6 +258,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
   <ul class="nav-links">
     <li><a href="#home">首頁</a></li>
     <li><a href="#about">關於講堂</a></li>
+    <li><a href="#association">協會介紹</a></li>
     <li><a href="#mind">心靈智慧</a></li>
     <li><a href="#teacher">黃老師語錄</a></li>
     <li><a href="#booking">活動與資訊</a></li>
@@ -240,6 +272,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
 <div class="mobile-menu">
   <a href="#home" onclick="document.getElementById('menu-toggle').checked=false">首頁</a>
   <a href="#about" onclick="document.getElementById('menu-toggle').checked=false">關於講堂</a>
+  <a href="#association" onclick="document.getElementById('menu-toggle').checked=false">協會介紹</a>
   <a href="#mind" onclick="document.getElementById('menu-toggle').checked=false">心靈智慧</a>
   <a href="#teacher" onclick="document.getElementById('menu-toggle').checked=false">黃老師語錄</a>
   <a href="#booking" onclick="document.getElementById('menu-toggle').checked=false">活動與資訊・線上預約</a>
@@ -257,6 +290,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
         <a class="btn-primary" href="#booking">預約諮詢</a>
         <a class="btn-ghost" href="#about">了解更多</a>
       </div>
+      <div class="hero-association">社團法人淨觀全人文教協會　｜　創辦人 黃郁玲老師</div>
     </div>
     <div class="hero-right">
       <img src="mazu.jpg" alt="媽祖神像　慈悲守護">
@@ -349,7 +383,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div class="footer-col"><p class="footer-col-title">網站頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li><li><a href="#booking">活動與資訊</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">聯絡我們</p><ul><li><a style="white-space:nowrap">高雄市三民區建國三路83號6樓</a></li><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li><li><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">Facebook 粉絲頁</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div>
+    <div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓　｜　(07) 285-9118</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂　版權所有</span><span>媽祖慈悲，守護每一顆心</span></div>
   </footer>
 </div>
 
@@ -365,9 +399,54 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <div style="background:var(--smoke);padding:40px 32px;"><div style="font-family:'Ma Shan Zheng',cursive;font-size:2.8rem;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">二</div><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:14px;">帝君正氣加持</h3><p style="font-size:1rem;line-height:2;color:var(--stone);">透過帝君精神的學習，幫助人培養堅定的內在力量，在人生道路上走得穩定清明。</p></div>
       <div style="background:var(--smoke);padding:40px 32px;"><div style="font-family:'Ma Shan Zheng',cursive;font-size:2.8rem;color:var(--gold);opacity:0.25;line-height:1;margin-bottom:12px;">三</div><h3 style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--deep);margin-bottom:14px;">修心內在覺察</h3><p style="font-size:1rem;line-height:2;color:var(--stone);">透過靜坐、觀照與覺察，慢慢學會看見自己的情緒與想法，找到真正的平靜。</p></div>
     </div>
+
+    <div class="legal-block">
+      <div class="legal-tag">— 法人身份 —</div>
+      <h3>關於我們的法人身份</h3>
+      <p>為了讓淨觀講堂的精神能更穩固地服務社會，我們於 <strong>2024 年 9 月 8 日</strong>正式立案為<strong>「社團法人淨觀全人文教協會」</strong>（立案字號：C010949），由 <strong>黃郁玲老師</strong>擔任首屆理事長。</p>
+      <p>協會以推廣全人教育、文化推廣與公益關懷為宗旨，透過辦理心靈成長、文化體驗、偏鄉教育推廣等公益活動，凝聚大眾愛心回饋社會。</p>
+      <p>對外，我們依然是大家熟悉的「淨觀講堂」；在正式文件上，我們是「社團法人淨觀全人文教協會」。</p>
+    </div>
+
     <a class="btn-primary" href="#booking" style="margin-top:48px;display:inline-block">預約諮詢</a>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓　｜　(07) 285-9118</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+</div>
+
+<!-- ASSOCIATION -->
+<div id="association" class="page">
+  <div class="page-banner"><p class="page-banner-tag">協會介紹</p><h1>社團法人<br>淨觀全人文教協會</h1><p>「淨觀講堂」於 2024 年 9 月正式立案為社團法人，讓淨觀講堂多年來的心靈陪伴精神，能以法人身份更穩固地服務社會。</p></div>
+  <div class="content-page">
+    <h2>關於本會</h2>
+    <p>協會由黃郁玲老師發起並擔任首屆理事長，以推廣全人教育、文化推廣與公益關懷為宗旨。對外，我們依然是大家熟悉的「淨觀講堂」；在正式文件上，我們是「社團法人淨觀全人文教協會」。</p>
+    <p>透過辦理心靈成長、文化體驗、偏鄉教育推廣等公益活動，凝聚大眾愛心回饋社會。</p>
+
+    <div class="association-info">
+      <div class="ai-block">
+        <h3>立案資訊</h3>
+        <div class="ai-row"><div class="ai-key">協會全名</div><div class="ai-val">社團法人淨觀全人文教協會</div></div>
+        <div class="ai-row"><div class="ai-key">對外通稱</div><div class="ai-val">淨觀講堂</div></div>
+        <div class="ai-row"><div class="ai-key">立案日期</div><div class="ai-val">2024 年 9 月 8 日</div></div>
+        <div class="ai-row"><div class="ai-key">立案字號</div><div class="ai-val">C010949</div></div>
+        <div class="ai-row"><div class="ai-key">主管機關</div><div class="ai-val">高雄市政府社會局</div></div>
+        <div class="ai-row"><div class="ai-key">理事長</div><div class="ai-val">黃郁玲</div></div>
+        <div class="ai-row"><div class="ai-key">會　址</div><div class="ai-val">高雄市三民區<br>建國三路 83 號 6 樓</div></div>
+      </div>
+      <div class="ai-block">
+        <h3>公益活動方向</h3>
+        <div class="ai-activity"><div class="ai-label">心靈成長</div><div class="ai-desc">靜心修行、心靈諮詢、信仰文化推廣</div></div>
+        <div class="ai-activity"><div class="ai-label">文化體驗</div><div class="ai-desc">結合日本茶道文化，舉辦心靈與禮儀體驗活動</div></div>
+        <div class="ai-activity"><div class="ai-label">偏鄉教育推廣</div><div class="ai-desc">深入偏鄉，陪伴弱勢學童成長</div></div>
+        <div class="ai-activity"><div class="ai-label">公益服務</div><div class="ai-desc">凝聚大眾愛心，以實際行動回饋社會</div></div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:64px;">合作與聯絡</h2>
+    <p>歡迎媒體、學校、企業、公益夥伴洽談合作。電話：(07) 285-9118　｜　Email：jingguan2023@gmail.com</p>
+
+    <a class="btn-primary" href="#booking" style="margin-top:32px;display:inline-block">線上預約</a>
+  </div>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- MIND -->
@@ -395,20 +474,24 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <p>當我們願意靜下心來，傾聽內在的聲音，很多問題的答案其實就在自己的心中。真正的人生智慧，不是逃避困難，而是在經歷之中成長，並找到屬於自己的道路。</p>
     </div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#teacher">黃老師語錄</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓　｜　(07) 285-9118</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- TEACHER -->
 <div id="teacher" class="page">
   <div class="page-banner"><p class="page-banner-tag">黃老師語錄</p><h1>師語智慧</h1><p>每一句話，都是在某個當下，從心裡流出來的。</p></div>
   <div class="content-page">
+    <div class="teacher-identity">
+      <div class="ti-name">黃郁玲　老師</div>
+      <div class="ti-role">社團法人淨觀全人文教協會　創辦人 / 理事長</div>
+    </div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">不再問什麼時候，此刻就是答案</h3><p>與其問「什麼時候」，不如讓心歇一歇。靜靜地聽著，靜靜地看著，靜靜地做著該做的事。因為「時候」，不在遠方，就在一個呼吸之間。當心靜了，萬物皆靜；當心明了，萬事皆明。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">媽祖在人間　志工的身影即是慈悲的化身</h3><p>當你看見一個人，默默地付出，不求回報，那就是媽祖在人間的樣子。志工的身影，就是慈悲最具體的化身。我們每一個人，都可以是媽祖在人間的一雙手。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">錢非萬能．媽祖濟世不收錢</h3><p>因為慈悲，本來就沒有價格。真正的幫助，是讓人站起來，而不是讓人依賴。緣金隨喜，是一種心意；不是門票，也不是條件。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;margin-bottom:56px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">承蒙關照　道法自然</h3><p>有時候，放手，才是最大的智慧。讓事情自然發展，讓緣分自然流動，讓答案自然浮現。道法自然，不是消極，而是一種更深的信任。</p></div>
     <div style="border-left:3px solid var(--gold);padding-left:36px;"><h3 style="font-family:'Noto Serif TC',serif;font-size:1.3rem;color:var(--deep);margin-bottom:20px;font-weight:500;">我會好好的</h3><p>不管現在多難，記得告訴自己：我會好好的。媽祖慈悲守護著你，你也要好好守護自己。</p></div>
   </div>
-  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
+  <footer><div class="footer-grid"><div><div class="footer-brand">淨觀講堂</div><p class="footer-tagline">靜心 · 修心 · 覺心</p></div><div class="footer-col"><p class="footer-col-title">服務項目</p><ul><li><a href="#home">靜心修行</a></li><li><a href="#booking">線上預約</a></li></ul></div><div class="footer-col"><p class="footer-col-title">頁面</p><ul><li><a href="#about">關於講堂</a></li><li><a href="#mind">心靈智慧</a></li></ul></div><div class="footer-col"><p class="footer-col-title">聯絡</p><ul><li><a href="tel:+88672859118">+886-7-2859118</a></li><li><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></li></ul></div></div><div class="footer-association"><strong>社團法人淨觀全人文教協會</strong>　｜　理事長 黃郁玲<br>立案字號 C010949　｜　立案日期 2024.09.08　｜　高雄市三民區建國三路 83 號 6 樓　｜　(07) 285-9118</div><div class="footer-bottom"><span>© 2026 高雄淨觀講堂</span></div></footer>
 </div>
 
 <!-- BOOKING -->
