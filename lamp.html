@@ -361,7 +361,7 @@ function submitForm(){
 
   const btn=document.getElementById('submit-btn');
   btn.disabled=true;btn.innerText='送出中...';
-  const API_URL='https://script.google.com/macros/s/AKfycbydzlJMGW0FOHp6hXpYY5yv7QIsxiVHBcQmJLNGOF1X5Uv_LH8nuUpSoTyX1n3VYhV4DA/exec';
+  const API_URL='https://script.google.com/macros/s/AKfycbzCJGVNGDFNKJL4Yl-o6P-THSpQpk_ivfMKrBxi4FVfkR8VzjUXsrkZhUICAGPCFV2B/exec';
   fetch(API_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(state)})
   .then(()=>{document.getElementById('success-modal').classList.add('show');})
   .catch(err=>{alert('送出失敗,請稍後再試或電話聯絡:(07) 285-9118');btn.disabled=false;btn.innerText='送出祈福';console.error(err);});
