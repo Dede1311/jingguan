@@ -102,6 +102,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:radial-gradient(ellipse at
         <input type="number" id="f-donation" min="0" step="100" placeholder="隨喜金額，可留空" style="padding-left:58px;">
       </div>
     </div>
+    <div class="field">
+      <label>備註 <span class="optional">(選填)</span></label>
+      <textarea id="f-note" placeholder="有其他想補充的事，可寫在這裡"></textarea>
+    </div>
   </div>
 
   <div class="section">
@@ -136,13 +140,14 @@ function updateSubmit(){
   document.getElementById('submit-btn').disabled=!(t&&n&&p&&topic);
 }
 function submitForm(){
-  state.event='預約問事';
-  state.time=document.getElementById('f-time').value.trim();
-  state.name=document.getElementById('f-name').value.trim();
-  state.birth=document.getElementById('f-birth').value.trim();
-  state.phone=document.getElementById('f-phone').value.trim();
-  state.topic=document.getElementById('f-topic').value.trim();
-  state.donation=parseInt(document.getElementById('f-donation').value)||0;
+  state['活動']='預約問事';
+  state['希望預約時間']=document.getElementById('f-time').value.trim();
+  state['稱呼']=document.getElementById('f-name').value.trim();
+  state['農曆生辰']=document.getElementById('f-birth').value.trim();
+  state['聯絡電話']=document.getElementById('f-phone').value.trim();
+  state['詢問事項']=document.getElementById('f-topic').value.trim();
+  state['隨喜功德金']=parseInt(document.getElementById('f-donation').value)||0;
+  state['備註']=document.getElementById('f-note').value.trim();
 
   const btn=document.getElementById('submit-btn');
   btn.disabled=true;btn.innerText='送出中...';
