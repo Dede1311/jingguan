@@ -146,7 +146,7 @@ function submitForm(){
 
   const btn=document.getElementById('submit-btn');
   btn.disabled=true;btn.innerText='送出中...';
-  const API_URL='https://script.google.com/macros/s/AKfycbxWpLY3Af7MCABo2FWiEpR2rKRWUckbTqxVUIcrAqWl3OicJlLkqUzuLt-fSPxiPemLlw/exec';
+  const API_URL='https://script.google.com/macros/s/AKfycby3ntQzYAQPvipPJz2Wxc3WXWt2AcQ0GSjyFCzlGa4sxzUtE2LT-S5ziUz_G4XCThSfXQ/exec';
   fetch(API_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(state)})
   .then(()=>{document.getElementById('success-modal').classList.add('show');})
   .catch(err=>{alert('送出失敗,請稍後再試或電話聯絡:(07) 285-9118');btn.disabled=false;btn.innerText='送出預約';console.error(err);});
