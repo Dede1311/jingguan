@@ -877,15 +877,9 @@ body{
         <div class="pray-price">$800<small>/份</small></div>
       </div>
       <div class="pray-details">
-        <div class="detail-hint">💡 此項目為集體贊普,請選擇要贊普的份數</div>
-        <div class="qty-box">
-          <span class="qty-label">贊普份數</span>
-          <div class="qty-control">
-            <button class="qty-btn" onclick="changeQty('shifang',-1)" type="button">−</button>
-            <span class="qty-num" id="qty-shifang">1</span>
-            <button class="qty-btn" onclick="changeQty('shifang',1)" type="button">+</button>
-          </div>
-        </div>
+        <div class="detail-hint">💡 可填多位功德主,每位可設定贊普份數(每份 $800)</div>
+        <div id="names-shifang"></div>
+        <button class="add-name-btn" onclick="addItem('shifang')" type="button">+ 新增一位</button>
       </div>
     </div>
 
@@ -1083,7 +1077,7 @@ body{
 <script>
 // 配置各項目資料
 const config={
-  shifang:{price:800,type:'qty'},
+  shifang:{price:800,type:'shifang'},
   zuxian:{price:1500,type:'zuxian'},  // 歷代祖先:陽世報恩人+地址(共同) + 姓名+牌位地址(每筆)
   wangqin:{price:1200,type:'wangqin'},  // 亡過先人:陽世報恩人+地址(共同) + 姓名+關係+牌位地址(每筆)
   yuanqin:{price:600,type:'yuanqin'},  // 冤親債主:迴向功德主+地址(共同) + 姓名(每筆)
@@ -1093,7 +1087,7 @@ const config={
 
 // 資料狀態
 const state={
-  shifang:{selected:false,qty:1},
+  shifang:{selected:false,items:[]},
   zuxian:{selected:false,holder:'',address:'',items:[]},  // holder/address 共同;每筆:{name,tablet}
   wangqin:{selected:false,holder:'',address:'',items:[]},  // 每筆:{name,relation,tablet}
   yuanqin:{selected:false,items:[]},  // 每筆:{holder,address} 多組功德主
@@ -1126,11 +1120,24 @@ function changeQty(key,delta){
   updateTotal();
 }
 
+// 十方法界 每位份數增減
+function changeItemQty(key,idx,delta){
+  event&&event.stopPropagation();
+  const q=(state[key].items[idx].qty||1)+delta;
+  if(q<1||q>99)return;
+  state[key].items[idx].qty=q;
+  const el=document.getElementById(`qty-${key}-${idx}`);
+  if(el)el.textContent=q;
+  updateTotal();
+}
+
 // 新增一筆項目
 function addItem(key){
   event&&event.stopPropagation();
   const type=config[key].type;
-  if(type==='zuxian'){
+  if(type==='shifang'){
+    state[key].items.push({name:'',address:'',qty:1});
+  }else if(type==='zuxian'){
     state[key].items.push({name:'',tablet:''});
   }else if(type==='wangqin'){
     state[key].items.push({name:'',relation:'',tablet:''});
@@ -1243,6 +1250,29 @@ function renderItems(key){
           <input type="text" value="${it.tablet}" onchange="updateItemField('${key}',${i},'tablet',this.value)" placeholder="安奉牌位或塔位的地址">
         </div>
       </div>`;
+    }else if(type==='shifang'){
+      return `<div class="name-entry">
+        <div class="name-entry-head">
+          <span class="name-entry-label">功德主</span>
+          ${removeBtn}
+        </div>
+        <div class="field">
+          <label>功德主姓名 <span class="required">*</span></label>
+          <input type="text" value="${it.name}" onchange="updateItemField('${key}',${i},'name',this.value)" placeholder="功德主姓名">
+        </div>
+        <div class="field" style="margin-top:10px;">
+          <label>地址 <span class="required">*</span></label>
+          <input type="text" value="${it.address}" onchange="updateItemField('${key}',${i},'address',this.value)" placeholder="功德主聯絡地址">
+        </div>
+        <div class="field" style="margin-top:10px;">
+          <label>贊普份數 <span class="required">*</span></label>
+          <div class="qty-control" style="justify-content:flex-start;">
+            <button class="qty-btn" onclick="changeItemQty('${key}',${i},-1)" type="button">−</button>
+            <span class="qty-num" id="qty-${key}-${i}">${it.qty}</span>
+            <button class="qty-btn" onclick="changeItemQty('${key}',${i},1)" type="button">+</button>
+          </div>
+        </div>
+      </div>`;
     }else if(type==='yuanqin'){
       return `<div class="name-entry">
         <div class="name-entry-head">
@@ -1325,9 +1355,13 @@ function updateTotal(){
   const items=[];
   Object.keys(config).forEach(key=>{
     if(!state[key].selected)return;
-    if(config[key].type==='qty'){
-      total+=config[key].price*state[key].qty;
-      items.push(`十方 ×${state[key].qty}`);
+    if(config[key].type==='shifang'){
+      let count=0;
+      state[key].items.forEach(it=>{count+=(parseInt(it.qty)||0);});
+      if(count>0){
+        total+=config[key].price*count;
+        items.push(`十方 ×${count}份`);
+      }
     }else if(config[key].type==='yuanqin'){
       // 冤親債主:每組功德主 = 1 份
       const count=state[key].items.length;
@@ -1386,7 +1420,11 @@ function submitForm(){
     const type=config[key].type;
     const s=state[key];
     
-    if(type==='zuxian'){
+    if(type==='shifang'){
+      if(s.items.some(x=>!x.name.trim()||!x.address.trim())){
+        alert('請完整填寫【十方法界眾生】每位的功德主姓名與地址');return;
+      }
+    }else if(type==='zuxian'){
       if(!s.holder.trim()||!s.address.trim()){
         alert('請填寫【歷代祖先】的陽世報恩人與地址');return;
       }
@@ -1425,8 +1463,8 @@ function submitForm(){
   let total=0;
   Object.keys(config).forEach(key=>{
     if(!state[key].selected)return;
-    if(config[key].type==='qty'){
-      total+=config[key].price*state[key].qty;
+    if(config[key].type==='shifang'){
+      state[key].items.forEach(it=>{total+=config[key].price*(parseInt(it.qty)||0);});
     }else if(config[key].type==='yuanqin'){
       total+=config[key].price*state[key].items.length;
     }else if(config[key].type==='dijizhu'){
