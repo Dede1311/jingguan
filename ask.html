@@ -92,8 +92,8 @@ body{font-family:'Noto Sans TC',sans-serif;background:radial-gradient(ellipse at
       <input type="tel" id="f-phone" placeholder="0912-345-678" oninput="updateSubmit()">
     </div>
     <div class="field">
-      <label>請示事項 <span class="required">*</span></label>
-      <textarea id="f-topic" placeholder="請簡述您想請示聖母的事項（例如：運途、事業、姻緣、健康、家運…）" oninput="updateSubmit()"></textarea>
+      <label>詢問事項 <span class="required">*</span></label>
+      <textarea id="f-topic" placeholder="請簡述您想詢問的事項（例如：運勢、事業、感情、健康、家運…）" oninput="updateSubmit()"></textarea>
     </div>
     <div class="field">
       <label>隨喜功德 <span class="optional">(選填，護持講堂)</span></label>
@@ -110,7 +110,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:radial-gradient(ellipse at
 
   <div class="section">
     <div class="notice">
-      <span style="white-space:nowrap;">🕯️ <b>濟世諮詢時間</b>（問事請預約於此時段）</span><br>
+      🕯️ <b>濟世諮詢時間</b>（問事請預約於此時段）<br>
       每週 <b>六</b>、<b>一</b>　13:30 － 17:00<br>
       <span style="display:block;margin:10px 0;border-top:1px dashed var(--gold);"></span>
       🕙 <b>講堂開放時間</b>：每日 10:00 － 17:00<br>
@@ -150,7 +150,7 @@ function submitForm(){
   state['稱呼']=document.getElementById('f-name').value.trim();
   state['農曆生辰']=document.getElementById('f-birth').value.trim();
   state['聯絡電話']=document.getElementById('f-phone').value.trim();
-  state['請示事項']=document.getElementById('f-topic').value.trim();
+  state['詢問事項']=document.getElementById('f-topic').value.trim();
   state['隨喜功德金']=parseInt(document.getElementById('f-donation').value)||0;
   state['備註']=document.getElementById('f-note').value.trim();
 

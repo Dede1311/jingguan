@@ -4,12 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>高雄淨觀講堂｜靜心修行・媽祖指引・人生諮詢</title>
-<meta name="description" content="高雄淨觀講堂提供靜心修行、媽祖與關聖帝爺指引、人生諮詢服務。位於高雄市三民區建國三路83號6樓。每週六日13:00-17:00開放。">
+<meta name="description" content="高雄淨觀講堂提供靜心修行、媽祖與關聖帝爺指引、人生諮詢服務。位於高雄市三民區建國三路83號6樓。每日10:00-17:00開放，濟世諮詢每週六、一13:30-17:00。">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#1a1208;--deep:#2b1f0e;--gold:#b8935a;--gold-light:#d4aa72;--gold-pale:#f5e9d3;--smoke:#f7f3ec;--stone:#8a7560;--cream:#faf6ef;--border:rgba(184,147,90,0.25);}
+
+/* ===== 服務選單（對應 LINE 圖文選單）===== */
+.menu-band{background:linear-gradient(180deg,#fdfaf4 0%,#f7f0e3 100%);padding:74px 24px 78px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.menu-head{text-align:center;margin-bottom:46px;}
+.menu-eyebrow{display:inline-block;font-family:'Noto Serif TC',serif;font-size:0.78rem;letter-spacing:0.52em;padding-left:0.52em;color:var(--gold);margin-bottom:14px;}
+.menu-head h2{font-family:'Noto Serif TC',serif;font-size:1.85rem;font-weight:500;color:var(--deep);letter-spacing:0.14em;}
+.menu-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);}
+.menu-cell{position:relative;display:flex;flex-direction:column;align-items:center;text-decoration:none;padding:38px 14px 34px;transition:background .35s ease;}
+.menu-cell:hover,.menu-cell:focus-visible{background:rgba(184,147,90,0.07);}
+.menu-cell:focus-visible{outline:2px solid var(--gold);outline-offset:-4px;}
+.menu-cell:not(:nth-child(3n))::after{content:'';position:absolute;right:0;top:16%;height:68%;width:1px;background:linear-gradient(180deg,transparent,rgba(184,147,90,0.42),transparent);}
+.menu-cell:nth-child(-n+3)::before{content:'';position:absolute;bottom:0;left:10%;width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,147,90,0.34),transparent);}
+.menu-ico{width:52px;height:52px;margin-bottom:16px;color:var(--gold);transition:transform .35s ease;}
+.menu-cell:hover .menu-ico{transform:translateY(-3px);}
+.menu-ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;}
+.menu-name{font-family:'Noto Serif TC',serif;font-size:1.3rem;font-weight:600;color:var(--deep);letter-spacing:0.16em;padding-left:0.16em;margin-bottom:7px;}
+.menu-sub{font-family:'Noto Serif TC',serif;font-size:0.85rem;color:var(--stone);letter-spacing:0.2em;padding-left:0.2em;}
+@media(max-width:720px){
+  .menu-band{padding:54px 14px 58px;}
+  .menu-head h2{font-size:1.45rem;}
+  .menu-grid{grid-template-columns:repeat(2,1fr);}
+  .menu-cell{padding:28px 8px 26px;}
+  .menu-cell:not(:nth-child(3n))::after{display:none;}
+  .menu-cell:nth-child(-n+3)::before{display:none;}
+  .menu-cell:not(:nth-child(2n))::after{content:'';display:block;position:absolute;right:0;top:16%;height:68%;width:1px;background:linear-gradient(180deg,transparent,rgba(184,147,90,0.42),transparent);}
+  .menu-cell:nth-child(-n+4)::before{content:'';display:block;position:absolute;bottom:0;left:10%;width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,147,90,0.34),transparent);}
+  .menu-ico{width:42px;height:42px;margin-bottom:12px;}
+  .menu-name{font-size:1.12rem;}
+  .menu-sub{font-size:0.76rem;}
+}
+@media(prefers-reduced-motion:reduce){.menu-cell,.menu-ico{transition:none;}}
+
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans TC',sans-serif;background:var(--cream);color:var(--ink);}
 
@@ -146,6 +178,23 @@ label.hamburger-btn{cursor:pointer;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .submit-btn{background:var(--deep);color:var(--gold-light);border:none;padding:16px;font-family:'Noto Sans TC',sans-serif;font-size:1rem;letter-spacing:0.14em;cursor:pointer;width:100%;transition:background 0.2s;}
 .submit-btn:hover{background:var(--gold);color:#fff;}
+
+/* 預約導引卡（取代原無作用表單）*/
+.book-cta{background:var(--smoke);border:1px solid var(--border);border-radius:4px;padding:40px 36px;}
+.book-cta h3{font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--deep);margin-bottom:10px;font-weight:400;letter-spacing:0.08em;}
+.book-cta .cta-lede{font-size:1rem;line-height:2.1;color:var(--stone);margin-bottom:26px;}
+.cta-hours{border-left:2px solid var(--gold);padding:2px 0 2px 16px;margin-bottom:28px;}
+.cta-hours dt{font-size:0.82rem;letter-spacing:0.14em;color:var(--gold);margin-bottom:2px;}
+.cta-hours dd{font-size:1.02rem;color:var(--ink);margin-bottom:14px;}
+.cta-hours dd:last-child{margin-bottom:0;}
+.btn-book{display:block;text-align:center;background:var(--deep);color:var(--gold-light);padding:17px;font-family:'Noto Serif TC',serif;font-size:1.08rem;letter-spacing:0.2em;padding-left:calc(0.2em + 17px);text-decoration:none;transition:background .25s,color .25s;}
+.btn-book:hover,.btn-book:focus-visible{background:var(--gold);color:#fff;}
+.btn-book:focus-visible{outline:2px solid var(--deep);outline-offset:3px;}
+.cta-alt{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:10px 26px;}
+.cta-alt a{font-size:0.96rem;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .25s;}
+.cta-alt a:hover,.cta-alt a:focus-visible{border-bottom-color:var(--gold);}
+@media(max-width:720px){.book-cta{padding:30px 22px;}}
+
 
 /* FOOTER */
 footer{background:var(--ink);padding:72px 96px 40px;}
@@ -289,7 +338,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <p class="hero-subtitle">天地能量，指引人生</p>
       <div class="hero-poem">在一片安靜之中，讓心慢慢落下來。<br>一呼一吸之間，身心安住，<br>方向，自然清明。</div>
       <div class="hero-buttons">
-        <a class="btn-primary" href="#booking">預約諮詢</a>
+        <a class="btn-primary" href="ask.html">預約問事</a>
         <a class="btn-ghost" href="#about">了解更多</a>
       </div>
       <div class="hero-association">社團法人淨觀全人文教協會　｜　創辦人 黃郁玲老師</div>
@@ -298,6 +347,46 @@ footer{background:var(--ink);padding:72px 96px 40px;}
       <img src="mazu.jpg" alt="媽祖神像　慈悲守護">
     </div>
   </section>
+
+  <!-- 服務選單（與 LINE 圖文選單一致） -->
+  <nav class="menu-band" aria-label="服務選單">
+    <div class="menu-head">
+      <span class="menu-eyebrow">淨觀講堂 · 服務選單</span>
+      <h2>您想從哪裡開始？</h2>
+    </div>
+    <div class="menu-grid">
+      <a class="menu-cell" href="events.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/></svg></span>
+        <span class="menu-name">最新法會</span>
+        <span class="menu-sub">活動・報名</span>
+      </a>
+      <a class="menu-cell" href="lamp.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><path d="M24 8c4 6 6.5 9.5 6.5 13a6.5 6.5 0 01-13 0c0-3.5 2.5-7 6.5-13z"/><path d="M11 32h26l-3.5 7h-19z"/><path d="M14 32c1.5-2.5 5-4 10-4s8.5 1.5 10 4"/></svg></span>
+        <span class="menu-name">點燈祈福</span>
+        <span class="menu-sub">點燈・安太歲</span>
+      </a>
+      <a class="menu-cell" href="teachings.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><path d="M14 42V13"/><path d="M24 42V8"/><path d="M34 42V16"/><path d="M14 20l-5-4M24 15l6-5M34 23l5-4"/><path d="M14 27l-5-3M24 24l6-4M34 30l5-3"/></svg></span>
+        <span class="menu-name">經典開示</span>
+        <span class="menu-sub">聖訓・文章</span>
+      </a>
+      <a class="menu-cell" href="about.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><circle cx="24" cy="11" r="4"/><path d="M6 36l10-13 7 8 6-9 13 14z"/><path d="M4 40h40"/></svg></span>
+        <span class="menu-name">講堂簡介</span>
+        <span class="menu-sub">聖母由來</span>
+      </a>
+      <a class="menu-cell" href="traffic.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><circle cx="35" cy="12" r="4"/><ellipse cx="30" cy="22" rx="7" ry="3.2"/><ellipse cx="21" cy="30" rx="7" ry="3.2"/><ellipse cx="12" cy="38" rx="7" ry="3.2"/></svg></span>
+        <span class="menu-name">交通指引</span>
+        <span class="menu-sub">位置・停車</span>
+      </a>
+      <a class="menu-cell" href="ask.html">
+        <span class="menu-ico"><svg viewBox="0 0 48 48"><path d="M18 20V9M24 20V6M30 20V9"/><path d="M9 24h30a15 15 0 01-30 0z"/><path d="M13 34h22"/></svg></span>
+        <span class="menu-name">預約問事</span>
+        <span class="menu-sub">問事・服務</span>
+      </a>
+    </div>
+  </nav>
 
   <div class="info-bar">
     <div class="info-item">
@@ -314,7 +403,7 @@ footer{background:var(--ink);padding:72px 96px 40px;}
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div><div class="info-label">營業時間</div><div class="info-value">每週六・日<br>13:00 – 17:00</div></div>
+      <div><div class="info-label">開放時間</div><div class="info-value">每日 10:00 – 17:00<br>濟世諮詢｜週六・週一<br>13:30 – 17:00</div></div>
     </div>
     <div class="info-item">
       <div class="info-icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
@@ -507,45 +596,27 @@ footer{background:var(--ink);padding:72px 96px 40px;}
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="contact-label">地址</div><div class="contact-value">高雄市三民區建國三路83號6樓（御宿商旅對面）</div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">電話</div><div class="contact-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">營業時間</div><div class="contact-value">每週六・日　13:00 – 17:00</div></div></li>
+        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">開放時間</div><div class="contact-value">每日 10:00 – 17:00<br>濟世諮詢｜週六・週一 13:30 – 17:00</div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="contact-label">Facebook</div><div class="contact-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div></li>
         <li><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/jing_guan_mazu" target="_blank">@jing_guan_mazu</a></div></div></li>
       </ul>
     </div>
-    <div>
-      <h3 style="font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--deep);margin-bottom:28px;font-weight:400;letter-spacing:0.06em;">活動報名・諮詢預約</h3>
-      <div class="booking-form">
-        <div class="form-row"><input type="text" placeholder="您的姓名 *"><input type="tel" placeholder="聯絡電話 *"></div>
-        <input type="email" placeholder="電子郵件">
-        <input type="date">
-        <select><option value="" disabled selected>選擇服務項目</option><option>靜心修行課程</option><option>信仰祈福</option><option>媽祖指引諮詢</option><option>關聖帝爺指引諮詢</option><option>點燈祈福</option><option>法會報名</option><option>其他</option></select>
-        <textarea placeholder="請簡述您的需求（選填）"></textarea>
-        <button class="submit-btn">送出預約申請</button>
-      </div>
-    </div>
-  </div>
-  <div class="booking-grid">
-    <div>
-      <h2>歡迎前來淨觀講堂</h2>
-      <p>媽祖慈悲濟世不收費，緣金隨喜，心意即可。我們只希望每個人都能找到屬於自己的方向。</p>
-      <ul class="contact-list">
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="contact-label">地址</div><div class="contact-value">高雄市三民區建國三路83號6樓（御宿商旅對面）</div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 000 2.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">電話</div><div class="contact-value"><a href="tel:+88672859118">+886-7-2859118</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">電子郵件</div><div class="contact-value"><a href="mailto:jingguan2023@gmail.com">jingguan2023@gmail.com</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-label">營業時間</div><div class="contact-value">每週六・日　13:00 – 17:00</div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><div class="contact-label">Facebook</div><div class="contact-value"><a href="https://www.facebook.com/share/1E1B6cPoM4/" target="_blank">淨觀講堂官方粉絲頁</a></div></div></li>
-        <li><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/jing_guan_mazu" target="_blank">@jing_guan_mazu</a></div></div></li>
-      </ul>
-    </div>
-    <div>
-      <h3 style="font-family:'Noto Serif TC',serif;font-size:1.4rem;color:var(--deep);margin-bottom:28px;font-weight:400;letter-spacing:0.06em;">活動報名・諮詢預約</h3>
-      <div class="booking-form">
-        <div class="form-row"><input type="text" placeholder="您的姓名 *"><input type="tel" placeholder="聯絡電話 *"></div>
-        <input type="email" placeholder="電子郵件">
-        <input type="date">
-        <select><option value="" disabled selected>選擇服務項目</option><option>靜心修行課程</option><option>信仰祈福</option><option>媽祖指引諮詢</option><option>關聖帝爺指引諮詢</option><option>點燈祈福</option><option>法會報名</option><option>其他</option></select>
-        <textarea placeholder="請簡述您的需求（選填）"></textarea>
-        <button class="submit-btn">送出預約申請</button>
+<div>
+      <div class="book-cta">
+        <h3>活動報名・諮詢預約</h3>
+        <p class="cta-lede">問事、法會、點燈都可以線上辦理。填完表單後，師兄師姐會與您聯繫確認時間。</p>
+        <dl class="cta-hours">
+          <dt>濟世諮詢</dt>
+          <dd>每週六・週一　13:30 － 17:00</dd>
+          <dt>講堂開放</dt>
+          <dd>每日　10:00 － 17:00</dd>
+        </dl>
+        <a class="btn-book" href="ask.html">前往預約問事</a>
+        <div class="cta-alt">
+          <a href="events.html">法會報名</a>
+          <a href="lamp.html">點燈祈福・安太歲</a>
+          <a href="traffic.html">交通與停車</a>
+        </div>
       </div>
     </div>
   </div>
