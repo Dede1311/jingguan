@@ -125,6 +125,10 @@ body{
 .pay-option.selected .pay-icon-wrap{background:var(--gold);color:#fff;}
 .pay-icon-wrap svg{width:22px;height:22px;}
 .pay-text{flex:1;}
+.pay-check{width:26px;height:26px;border:2px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#fff;transition:all .2s;}
+.pay-check svg{width:15px;height:15px;stroke:#fff;stroke-width:3;fill:none;opacity:0;}
+.pay-option.selected .pay-check{background:var(--gold);}
+.pay-option.selected .pay-check svg{opacity:1;}
 .pay-name{font-family:'Noto Serif TC',serif;font-size:1.05rem;color:var(--red);font-weight:500;letter-spacing:0.1em;margin-bottom:2px;}
 .pay-desc{font-size:0.78rem;color:var(--stone);}
 .bank-details-standalone{max-width:340px;margin:0 auto;padding:22px 24px;background:var(--gold-pale);border-radius:8px;border-left:3px solid var(--gold);}
@@ -256,11 +260,11 @@ body{
     <div class="pay-options">
       <div class="pay-option" data-pay="cash" onclick="selectPay('cash')">
         <div class="pay-icon-wrap"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 10h.01M18 14h.01"/></svg></div>
-        <div class="pay-text"><div class="pay-name">現場繳交</div><div class="pay-desc">法會前繳款</div></div>
+        <div class="pay-text"><div class="pay-name">現場繳交</div><div class="pay-desc">法會前繳款</div></div><div class="pay-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       </div>
       <div class="pay-option" data-pay="bank" onclick="selectPay('bank')">
         <div class="pay-icon-wrap"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg></div>
-        <div class="pay-text"><div class="pay-name">銀行匯款</div><div class="pay-desc">收到後確認報名</div></div>
+        <div class="pay-text"><div class="pay-name">銀行匯款</div><div class="pay-desc">收到後確認報名</div></div><div class="pay-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       </div>
     </div>
     <div class="bank-details-standalone">
@@ -394,7 +398,7 @@ function submitForm(){
   state.event='藥師佛祈福法會';
   const btn=document.getElementById('submit-btn');
   btn.disabled=true;btn.innerText='送出中...';
-  const API_URL='https://script.google.com/macros/s/AKfycbxKnlcobaLfDVuUx2--2F6UP0srqvBcLHzmnVSe3_dOHVoHwQXU0dGHhsWLeTzcqKcl/exec';
+  const API_URL='https://script.google.com/macros/s/AKfycbzeA6yUE5ugV7GVeNLjL3dlY7B3euk85JV_T1zW-VesB95zKknhGVGjEYnsb3DEvKKFlA/exec';
   fetch(API_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(state)})
   .then(()=>{document.getElementById('success-modal').classList.add('show');})
   .catch(err=>{alert('送出失敗,請稍後再試或直接電話聯絡:(07) 285-9118');btn.disabled=false;btn.innerText='送出報名';console.error(err);});
