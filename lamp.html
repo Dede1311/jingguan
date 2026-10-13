@@ -289,6 +289,7 @@ function addPerson(){
       <button type="button" class="person-del" onclick="delPerson(${personId})">✕ 移除</button>
     </div>
     <div class="field"><label>姓名 <span class="required">*</span></label><input type="text" class="p-name" placeholder="祈福人姓名" oninput="updateSubmit()"></div>
+    <div class="field"><label>國曆生日 <span class="optional">(選填)</span></label><input type="text" class="p-birth-solar" placeholder="例：民國70年1月1日"></div>
     <div class="field"><label>農曆生辰 <span class="optional">(點燈用)</span></label><input type="text" class="p-birth" placeholder="例：民國70年 正月初一 子時"></div>
     <div class="field"><label>住址 <span class="optional">(選填)</span></label><input type="text" class="p-address" placeholder="祈福人住址"></div>`;
   document.getElementById('person-list').appendChild(div);
@@ -341,11 +342,13 @@ function submitForm(){
   const persons=[];
   document.querySelectorAll('.person').forEach(p=>{
     const n=p.querySelector('.p-name').value.trim();
+    const bs=p.querySelector('.p-birth-solar').value.trim();
     const b=p.querySelector('.p-birth').value.trim();
     const ad=p.querySelector('.p-address').value.trim();
     if(n){
       let str=n;
-      if(b)str+='（'+b+'）';
+      const bd=[];if(bs)bd.push('國曆:'+bs);if(b)bd.push('農曆:'+b);
+      if(bd.length)str+='（'+bd.join('／')+'）';
       if(ad)str+=' '+ad;
       persons.push(str);
     }
