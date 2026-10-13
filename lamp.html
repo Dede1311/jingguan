@@ -107,14 +107,14 @@ body{font-family:'Noto Sans TC',sans-serif;background:linear-gradient(180deg,var
     <h3 class="section-title">祈福項目</h3>
     <p class="section-desc">請選擇欲點的燈項，可複選、可調整數量</p>
     
-    <div class="lamp-card" data-key="guangming" data-price="1200">
+    <div class="lamp-card" data-key="guangming" data-price="1000">
       <div class="lamp-main" onclick="toggleLamp('guangming')">
         <div class="lamp-check"><span class="tick">✓</span></div>
         <div class="lamp-info">
           <div class="lamp-name">光明燈</div>
           <div class="lamp-desc">祈求光明照路、事業學業順遂、前程光明</div>
         </div>
-        <div class="lamp-price">NT$ 1,200</div>
+        <div class="lamp-price">NT$ 1,000</div>
       </div>
       <div class="lamp-qty" id="qty-guangming">
         <span class="qty-label">數量</span>
@@ -125,14 +125,14 @@ body{font-family:'Noto Sans TC',sans-serif;background:linear-gradient(180deg,var
         </div>
       </div>
     </div>
-    <div class="lamp-card" data-key="caishen" data-price="1200">
+    <div class="lamp-card" data-key="caishen" data-price="1000">
       <div class="lamp-main" onclick="toggleLamp('caishen')">
         <div class="lamp-check"><span class="tick">✓</span></div>
         <div class="lamp-info">
           <div class="lamp-name">財神燈</div>
           <div class="lamp-desc">祈求財源廣進、事業興隆、招財納福</div>
         </div>
-        <div class="lamp-price">NT$ 1,200</div>
+        <div class="lamp-price">NT$ 1,000</div>
       </div>
       <div class="lamp-qty" id="qty-caishen">
         <span class="qty-label">數量</span>
@@ -264,7 +264,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:linear-gradient(180deg,var
 </div>
 
 <script>
-const LAMPS={guangming:{name:'光明燈',price:1200},caishen:{name:'財神燈',price:1200},pingan:{name:'平安符',price:600},shuwen:{name:'闔家祈安疏文',price:1200}};
+const LAMPS={guangming:{name:'光明燈',price:1000},caishen:{name:'財神燈',price:1000},pingan:{name:'平安符',price:600},shuwen:{name:'闔家祈安疏文',price:1200}};
 const state={items:{},pay:'',contact:{}};
 let personId=0;
 
