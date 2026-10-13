@@ -339,7 +339,7 @@ function submitForm(){
   for(const k in state.items){total+=LAMPS[k].price*state.items[k];itemList.push(LAMPS[k].name+' ×'+state.items[k]);}
   const don=parseInt(document.getElementById('donation').value)||0;
   if(don>0){total+=don;}
-  const persons=[];
+  const persons=[];const personObjs=[];
   document.querySelectorAll('.person').forEach(p=>{
     const n=p.querySelector('.p-name').value.trim();
     const bs=p.querySelector('.p-birth-solar').value.trim();
@@ -351,13 +351,14 @@ function submitForm(){
       if(bd.length)str+='（'+bd.join('／')+'）';
       if(ad)str+=' '+ad;
       persons.push(str);
+      personObjs.push({name:n,solar:bs,lunar:b,address:ad});
     }
   });
   state.total=total;
   state.itemText=itemList.join('、');
   state.donation=don;
   state.persons=persons.join('、');
-  state.personList=persons;
+  state.personList=personObjs;
   state.personCount=persons.length;
   state.event='2027點燈祈福';
   const payMap={cash:'現場繳交',bank:'銀行匯款'};
